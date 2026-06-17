@@ -1,0 +1,236 @@
+You are a senior frontend developer specializing in luxury hospitality websites. Build a complete, single-file HTML website for "Hotel Khoai" (Hotel খোয়াই) — a premium rustic Bengali restaurant with tribal folk art decor, bamboo architecture, fairy-lit outdoor gazebos, and authentic Bengali/non-veg cuisine.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+BRAND IDENTITY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Name: Hotel Khoai | হোটেল খোয়াই
+Tagline: "Where Roots Meet Flavours"
+Personality: Earthy, cultural, warm, rustic-premium
+Google Maps: https://maps.app.goo.gl/CEsCxcVBaUrYY4vNA
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+DESIGN LANGUAGE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Theme: Dark luxury with warm earthy accents
+Primary BG: #0D0A07 (near-black with warm undertone)
+Surface: #1A1208
+Accent Gold: #E8B84B (neon-golden, used sparingly)
+Accent Teal: #00E5CC (neon cyan, used for Bengali script highlights)
+Text Primary: #F5ECD7 (warm off-white)
+Text Muted: #9C8A6E
+Bamboo Brown: #8B6914
+Border: rgba(232, 184, 75, 0.15)
+
+Fonts (load from Google Fonts):
+  - "Playfair Display" — headings (elegant serif)
+  - "DM Sans" — body/UI (clean modern)
+  - "Tiro Bangla" — Bengali script elements
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TECH STACK (all via CDN, single file)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Tailwind CSS (cdn.tailwindcss.com)
+- GSAP 3 + ScrollTrigger plugin (cdnjs)
+- Locomotive Scroll or vanilla smooth scroll
+- AOS (Animate On Scroll) for fallback
+- Phosphor Icons or Lucide Icons
+- Vanilla JS only — no React/Vue
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ANIMATION REQUIREMENTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. HERO: Full-screen cinematic entrance
+   - Animated golden particle rain (canvas-based) — like fireflies/sparks
+   - Staggered text reveal: Bengali script first fades in (খোয়াই), then English "Hotel Khoai" slides up
+   - Subtle parallax background texture (SVG bamboo pattern)
+   - Pulsing neon glow behind the logo text
+
+2. SCROLL ANIMATIONS (GSAP ScrollTrigger):
+   - Section headings: clip-path reveal left-to-right
+   - Cards: stagger fade-up with slight rotation (rotateX: 15deg → 0)
+   - Menu items: slide-in from alternating sides
+   - Numbers/stats: count-up animation when in view
+   - Decorative borders: draw-on SVG line animations
+
+3. NAVBAR:
+   - Transparent → frosted glass (backdrop-blur) on scroll
+   - Logo shrinks from 40px to 28px on scroll
+   - Smooth color transition
+
+4. HOVER EFFECTS:
+   - Menu cards: golden shimmer sweep on hover (CSS ::after pseudo with gradient)
+   - CTA buttons: magnetic hover (JS mouse tracking offset)
+   - Gallery images: scale + golden border reveal
+   - Nav links: underline draws from center outward
+
+5. PAGE LOAD:
+   - Preloader: rotating Bengali "খ" letterform (SVG path animation) for 2s
+   - Content fades in after preloader exits
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTIONS (in order)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[0] PRELOADER
+- Dark screen, centered animated SVG Bengali "খ" drawing itself
+- Thin golden progress bar at bottom
+- Fades out smoothly after 2 seconds
+
+[1] NAVBAR
+- Logo: "Hotel খোয়াই" (Bengali teal) + "KHOAI" (gold, spaced)
+- Links: Home, Our Story, Menu, Gallery, Find Us
+- Right: "Reserve a Table" CTA button (gold border, transparent fill)
+- Mobile: hamburger → full-screen overlay menu with staggered link entrance
+
+[2] HERO SECTION
+- Full viewport height
+- Background: dark textured (SVG bamboo weave pattern, very subtle)
+- Floating golden particle canvas (50 particles, slow drift)
+- Center content:
+    • Small badge: "Est. in Khoai Valley" with leaf icon
+    • Large heading: "खोयाई" (Devanagari effect) → actually "খোয়াই" in Tiro Bangla, 96px, teal glow
+    • Sub-heading: "Hotel Khoai" in Playfair Display, 56px, gold
+    • Tagline: "Where Roots Meet Flavours" italic, muted
+    • Two CTAs: "Explore Menu" (filled gold) | "Our Story" (ghost)
+    • Scroll indicator: animated down-arrow with "Scroll to explore" text
+- Bottom: curved/wavy SVG divider into next section
+
+[3] STATS BAR
+- 4 animated count-up stats in a horizontal band:
+    • 500+ Happy Guests Monthly
+    • 40+ Dishes on Menu
+    • 8+ Years of Heritage
+    • ⭐ 4.5 Google Rating
+- Golden accent separators between stats
+- Background: slightly lighter surface (#1A1208)
+
+[4] OUR STORY
+- Two-column layout (text left, visual right)
+- Text: Story of Hotel Khoai — rustic beginnings, bamboo architecture, folk art passion, authentic Bengali cuisine. Write compelling 3-paragraph placeholder copy in this tone.
+- Visual right: mockup of the outdoor gazebo (use CSS art — round shape with fairy light dots using box-shadow, 200 glowing dots in purple/gold)
+- Floating decorative: folk-art eye motif (SVG inspired by Jagannath eyes — circular, colorful, tribal)
+- Animated: text paragraphs reveal on scroll one by one
+
+[5] AMBIENCE GALLERY
+- Heading: "The Khoai Experience"
+- Masonry grid layout (3 columns, 6 cards)
+- Cards with rounded corners, dark bg
+- Inside each card: colored gradient placeholder (no real images needed), title overlay at bottom
+- Titles: "The Bamboo Hall", "Fairy Lit Gazebo", "Folk Art Walls", "Open Kitchen", "Night Vibes", "Riverside Corner"
+- Hover: image scale 1.05 + golden border + caption slides up
+- Filter tabs: All | Indoor | Outdoor | Night
+
+[6] MENU SECTION
+- Heading: "Our Culinary Soul" with Bengali "রান্নাঘর" subtitle
+- Tab navigation: Starters | Non-Veg Mains | Fish & Seafood | Rice | Lunch Specials
+- Each tab shows animated grid of menu cards
+- Menu Card design:
+    • Dark surface card
+    • Dish name (Playfair, 16px, off-white)
+    • Category badge (small, colored)
+    • Price (gold, 18px, right-aligned)
+    • Optional: "Chef's Pick" ribbon on signature dishes
+    • Hover: golden shimmer + slight lift
+
+MENU DATA (use exactly):
+
+STARTERS — Chicken & Fish:
+Chicken Pakora (6pcs) ₹150 | Crispy Chicken ₹170 | Chicken Oil Fry (6pcs) ₹190
+Smoke Chicken (6pcs) ₹270 | Dry Chilli Chicken ₹190 | Lemon Pepper Chicken (6pcs) ₹210
+Chicken Lollipop (4pcs) ₹220 | Fish Finger (4pcs) ₹150 | Fish Fry (2pcs) ₹160
+Dry Chilli Fish (6pcs) ₹200 | Honey Prawn (4pcs) ₹280 | Lemon Garlic Prawn (4pcs) ₹280
+Chicken Tandoori Half ₹240 | Chicken Tandoori Full ₹410 | Chicken Tangdi Kabab (2pcs) ₹180
+Chicken Angara Kabab (2pcs) ₹230 | Chicken Tikka (6pcs) ₹200 | Chicken Malai Kabab (6pcs) ₹240
+Chicken Kabab (6pcs) ₹220 | Chicken Rashmi Kabab (6pcs) ₹260 | Chicken Hariyali Kabab (6pcs) ₹260
+Honey Chicken (8pcs) ₹280 | Pomfret Tandoor (1pc) ₹210 | Pomfret Tandoor (2pcs) ₹380
+Chicken Gold Coin (6pcs) ₹220
+
+NON-VEG MAINS (Gravy):
+Chicken Curry (3pcs) ₹180 | Chicken Kosha (3pcs) ₹190 | Chicken Do-Piaza (3pcs) ₹220
+Kadai Chicken (3pcs) ₹230 | Chicken Masala (3pcs) ₹250 | Chicken Butter Masala (3pcs) ₹260
+Chicken Rashmi Butter Masala ₹280 | Lemon Chicken (3pcs) ₹190 | Afghani Chicken (3pcs) ₹220
+Chicken Bharta ₹200 | ★ Khoai Special Chicken (4pcs) ₹300 [CHEF'S PICK]
+Chicken Tarka ₹110 | Egg Tarka ₹90 | Egg Chicken Tarka ₹120
+Chilli Chicken (6pcs) ₹180 | Chicken Manchurian (6pcs) ₹180 | Chicken Tikka Masala (6pcs) ₹220
+Chicken Stew (4pcs) ₹180 | Malai Chicken (6pcs) ₹250 | Mutton Curry (3pcs) ₹300
+Mutton Masala (3pcs) ₹310 | Mutton Kosha (3pcs) ₹320 | ★ Khoai Special Mutton (4pcs) ₹400 [CHEF'S PICK]
+Handi Mutton (5pcs) ₹500 | Egg Curry (2pcs) ₹70 | Egg Masala (2pcs) ₹80
+
+FISH & SEAFOOD (Lunch):
+Katla Fish Curry ₹130 | Katla Kalia ₹140 | Sorshe Katla ₹150 | Katla Posto ₹160
+Katla Fry ₹120 | Doi Katla ₹150 | Pomfret Fry ₹180 | Sorshe Pomfret ₹180
+Pabda Jhal ₹140 | ★ Sorshe Ilish ₹280 [CHEF'S PICK] | Ilish Fry ₹260 | Ilish Paturi ₹300
+Mourola Jhal ₹120 | Bhetki Paturi ₹200 | Chingri Malai Curry (3pcs) ₹210
+Chingri Jhal Small ₹150 | ★ Khoai Special Prawn Malai Curry (4pcs) ₹300 [CHEF'S PICK]
+
+RICE:
+Basmati Rice ₹60 | Jeera Rice ₹80 | Pineapple Rice ₹120 | Fried Rice Veg ₹130
+Egg Chicken Fried Rice ₹200 | Kashmiri Pulao ₹180 | Basanti Pulao ₹160
+Greenpeas Pulao ₹160 | Mixed Fried Rice ₹240 | Chicken Fried Rice ₹190
+Egg Chicken Fried Rice ₹210 | Egg Fried Rice ₹160 | Paneer Fried Rice ₹180
+
+LUNCH SPECIALS:
+Veg Thali ₹160 | Posto Bora ₹100
+Extras: Moong Dal ₹60 | Aloo Posto ₹80 | Aloo Bhaja ₹30 | Begun Bhaja ₹40
+Papad ₹30 | Roasted Papad ₹20
+
+[7] SIGNATURE DISH SPOTLIGHT
+- Full-width horizontal scroll section (snap scroll)
+- 3 featured dishes with large visual cards:
+    1. Khoai Special Chicken — "Our crown jewel. 4-piece slow-cooked in secret masala."
+    2. Sorshe Ilish — "The soul of Bengal. Hilsa in mustard, wrapped in tradition."
+    3. Handi Mutton — "5-piece tender mutton, slow-simmered in a sealed handi."
+- Each card: large text name, price in gold, description, decorative folk-art border frame
+
+[8] FIND US / CONTACT
+- Two column: left = contact info + hours, right = embedded map placeholder (styled div with map pin animation)
+- Info:
+    • Location badge: "On NH-60 Khoai" with map pin icon
+    • Hours: Open daily 11 AM – 11 PM
+    • Phone: (placeholder)
+    • Google Maps CTA button
+- Decorative: SVG animated map path drawing itself to the location pin
+- Background: slightly different dark texture
+
+[9] FOOTER
+- Logo centered
+- Bengali script: "আসুন, খান, উপভোগ করুন" (Come, Eat, Enjoy)
+- Quick links row
+- "Made with ❤️ for Hotel Khoai" in small muted text
+- Thin golden top border
+- Back-to-top button (smooth scroll)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+DECORATIVE ELEMENTS (use throughout)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- SVG Jagannath-style folk eyes (two concentric circles with bold outlines, colored fills) as floating decorative accents between sections — abstract, non-religious treatment
+- Bamboo stalk SVG dividers between some sections
+- Repeating SVG pattern: diagonal bamboo weave (very subtle, 3% opacity on backgrounds)
+- Firefly/spark particle effects on hero and one other dark section
+- Curved SVG wave dividers between sections (alternating directions)
+- Dotted gold border frames on pull-quotes and special callouts
+- Leaf/botanical SVG accents near headings
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+RESPONSIVE DESIGN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Mobile-first Tailwind classes
+- Hero text: 96px → 56px → 36px (desktop → tablet → mobile)
+- Menu grid: 3col → 2col → 1col
+- Gallery: 3col → 2col → 1col
+- Stats bar: 4col → 2x2 grid on mobile
+- All animations: reduced-motion @media query respected (prefers-reduced-motion: reduce → disable GSAP, keep only opacity transitions)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PERFORMANCE NOTES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Lazy-init GSAP ScrollTrigger (only after preloader exits)
+- Canvas particle system: requestAnimationFrame with max 60fps cap
+- All images are CSS/SVG generated — no external image fetches
+- Defer non-critical scripts
+- Use will-change: transform only on actively-animated elements
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+OUTPUT FORMAT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Single complete HTML file. All CSS inside 

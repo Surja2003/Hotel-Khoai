@@ -1,0 +1,146 @@
+/* ── Scroll ── */
+html { scroll-behavior: smooth; }
+
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: #080604; }
+::-webkit-scrollbar-thumb { background: rgba(232,184,75,0.3); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(232,184,75,0.55); }
+
+::selection { background: rgba(232,184,75,0.22); color: #F5ECD7; }
+
+/* ── Keyframes ── */
+@keyframes glow-teal {
+  0%, 100% { text-shadow: 0 0 40px rgba(0,229,204,0.5), 0 0 80px rgba(0,229,204,0.2); }
+  50%       { text-shadow: 0 0 100px rgba(0,229,204,0.9), 0 0 200px rgba(0,229,204,0.4), 0 0 300px rgba(0,229,204,0.15); }
+}
+@keyframes glow-gold {
+  0%, 100% { text-shadow: 0 0 20px rgba(232,184,75,0.35); }
+  50%       { text-shadow: 0 0 60px rgba(232,184,75,0.75), 0 0 100px rgba(232,184,75,0.35); }
+}
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-12px); }
+}
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33%       { transform: translateY(-8px) rotate(1.5deg); }
+  66%       { transform: translateY(-4px) rotate(-1deg); }
+}
+@keyframes spin-ring {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes spin-ring-reverse {
+  from { transform: rotate(360deg); }
+  to   { transform: rotate(0deg); }
+}
+@keyframes shimmer-sweep {
+  0%   { transform: translateX(-200%) skewX(-15deg); opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { transform: translateX(300%) skewX(-15deg); opacity: 0; }
+}
+@keyframes progress-bar {
+  from { width: 0%; }
+  to   { width: 100%; }
+}
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse-ring {
+  0%   { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(2.4); opacity: 0; }
+}
+@keyframes gold-border-draw {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0% 0 0); }
+}
+
+/* ── Utility classes ── */
+.khoai-teal-glow  { animation: glow-teal 3.5s ease-in-out infinite; }
+.khoai-gold-glow  { animation: glow-gold 3.5s ease-in-out infinite; }
+.khoai-float      { animation: float-gentle 4s ease-in-out infinite; }
+.khoai-float-slow { animation: float-slow 6s ease-in-out infinite; }
+.khoai-spin       { animation: spin-ring 8s linear infinite; }
+.khoai-spin-rev   { animation: spin-ring-reverse 12s linear infinite; }
+
+/* ── Shimmer card ── */
+.khoai-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+.khoai-shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 20%, rgba(232,184,75,0.09) 50%, transparent 80%);
+  transform: translateX(-200%) skewX(-15deg);
+  pointer-events: none;
+}
+.khoai-shimmer:hover::after {
+  animation: shimmer-sweep 0.65s ease forwards;
+}
+
+/* ── Button shimmer ── */
+.khoai-btn-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+.khoai-btn-shimmer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 30%, rgba(255,255,255,0.18) 50%, transparent 70%);
+  transform: translateX(-200%) skewX(-15deg);
+  pointer-events: none;
+  transition: none;
+}
+.khoai-btn-shimmer:hover::before {
+  animation: shimmer-sweep 0.5s ease forwards;
+}
+
+/* ── Preloader bar ── */
+.khoai-progress-bar {
+  animation: progress-bar 2s ease-out forwards;
+}
+
+/* ── Pulse ring ── */
+.khoai-pulse-ring {
+  animation: pulse-ring 2s ease-out infinite;
+}
+
+/* ── Tab scroll mobile ── */
+.khoai-tab-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.khoai-tab-scroll::-webkit-scrollbar { display: none; }
+
+/* ── Page transitions ── */
+.khoai-page-enter {
+  animation: fade-in-up 0.6s ease forwards;
+}
+
+/* ── Frosted glass ── */
+.khoai-glass {
+  background: rgba(26, 18, 8, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(232, 184, 75, 0.12);
+}
+
+/* ── Gold line accent ── */
+.khoai-line {
+  display: block;
+  width: 48px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #E8B84B, transparent);
+  margin: 0 auto;
+}
+
+/* ── Mobile touch improvements ── */
+@media (max-width: 768px) {
+  button, a { -webkit-tap-highlight-color: transparent; }
+}
