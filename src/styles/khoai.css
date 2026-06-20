@@ -203,25 +203,33 @@ html { scroll-behavior: smooth; }
   );
 }
 
-/* Mobile: cover with reduced height = less crop on landscape image */
+/* Mobile: image anchored at bottom, natural proportions — sign goes above visible frame */
 @media (max-width: 768px) {
   .khoai-hero-section {
-    min-height: calc(56vw + 160px);
+    /* Section height = natural image height at mobile width (56vw) + content space */
+    min-height: calc(56vw + 180px);
   }
   .khoai-hero-img {
-    object-fit: cover;
-    object-position: center bottom;
-    filter: blur(1.5px); /* subtle blur — makes physical sign text unreadable */
+    /* Bottom-anchored, full width, auto height = natural proportions, NO crop on height */
+    /* Image is 1191x663 (1.8:1 landscape). At 390px wide → 217px tall.              */
+    /* The sign lives in top 50% of image → goes ABOVE the visible section frame.    */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    inset: unset;
+    width: 100%;
+    height: auto;
+    object-fit: unset;
+    object-position: unset;
+    filter: none; /* NO blur */
   }
   .khoai-hero-overlay {
-    /* Very dark at top (sign area), lighter at bottom (entrance visible) */
     background: linear-gradient(
       180deg,
-      rgba(13,10,7,0.88) 0%,
-      rgba(13,10,7,0.82) 25%,
-      rgba(13,10,7,0.72) 45%,
-      rgba(13,10,7,0.45) 65%,
-      rgba(13,10,7,0.88) 100%
+      rgba(13,10,7,0.82) 0%,
+      rgba(13,10,7,0.45) 50%,
+      rgba(13,10,7,0.80) 100%
     );
   }
 }
