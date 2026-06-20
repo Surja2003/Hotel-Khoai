@@ -191,7 +191,14 @@ html { scroll-behavior: smooth; }
 @media (max-width: 768px) {
   .khoai-hero-bg {
     background-position: 72% 35%;
-    background-image: linear-gradient(180deg, rgba(13,10,7,0.55) 0%, rgba(13,10,7,0.85) 100%), url("/assets/hotel_exterior.png");
+    background-image: linear-gradient(
+      180deg,
+      rgba(13,10,7,0.82) 0%,
+      rgba(13,10,7,0.85) 20%,
+      rgba(13,10,7,0.80) 45%,
+      rgba(13,10,7,0.65) 70%,
+      rgba(13,10,7,0.88) 100%
+    ), url("/assets/hotel_exterior.png");
   }
 }
 
