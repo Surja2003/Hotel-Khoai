@@ -96,20 +96,15 @@ export default function Layout() {
               <div style={{
                 fontFamily: '"Tiro Bangla", serif',
                 color: '#00E5CC',
-                fontSize: scrolled ? '16px' : '19px',
-                transition: 'font-size 0.3s ease',
+                fontSize: scrolled ? '18px' : '21px',
+                transition: 'all 0.3s ease',
                 textShadow: '0 0 20px rgba(0,229,204,0.35)',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '6px'
               }}>
-                হোটেল খোয়াই
-              </div>
-              <div style={{
-                fontFamily: '"Playfair Display", serif',
-                color: '#E8B84B',
-                fontSize: scrolled ? '8.5px' : '10px',
-                letterSpacing: '5px',
-                transition: 'font-size 0.3s ease',
-              }}>
-                KHOAI
+                <span style={{ fontFamily: '"Playfair Display", serif', color: '#E8B84B' }}>Hotel</span>
+                <span>খোয়াই</span>
               </div>
             </div>
           </Link>
@@ -283,8 +278,10 @@ export default function Layout() {
         <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 24px', textAlign: 'center' }}>
 
           {/* Logo */}
-          <div className="khoai-teal-glow" style={{ fontFamily: '"Tiro Bangla", serif', color: '#00E5CC', fontSize: '36px', marginBottom: '8px' }}>হোটেল খোয়াই</div>
-          <div style={{ fontFamily: '"Playfair Display", serif', color: '#E8B84B', fontSize: '11px', letterSpacing: '7px', marginBottom: '12px' }}>KHOAI</div>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', marginBottom: '8px' }}>
+            <span style={{ fontFamily: '"Playfair Display", serif', color: '#E8B84B', fontSize: '36px', textShadow: '0 0 20px rgba(232,184,75,0.2)' }}>Hotel</span>
+            <span style={{ fontFamily: '"Tiro Bangla", serif', color: '#00E5CC', fontSize: '36px', textShadow: '0 0 20px rgba(0,229,204,0.2)' }}>খোয়াই</span>
+          </div>
 
           {/* Tagline */}
           <div style={{ fontFamily: '"Playfair Display", serif', color: '#9C8A6E', fontSize: '14px', fontStyle: 'italic', marginBottom: '8px' }}>Where Roots Meet Flavours</div>
@@ -303,7 +300,7 @@ export default function Layout() {
           </div>
 
           {/* Credits */}
-          <div style={{ color: '#3A3028', fontSize: '12px', marginBottom: '24px' }}>Made with ❤️ for Hotel Khoai</div>
+          <div style={{ color: '#3A3028', fontSize: '12px', marginBottom: '24px' }}>Made with ❤️ for Hotel খোয়াই</div>
 
           {/* Back to top */}
           <button

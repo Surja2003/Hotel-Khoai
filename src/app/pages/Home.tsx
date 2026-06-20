@@ -127,7 +127,7 @@ function GazeboVisual() {
       }}>
         <img 
           src="/assets/gazebo_night.png" 
-          alt="Fairy Lit Gazebo at Hotel Khoai" 
+          alt="Fairy Lit Gazebo at Hotel খোয়াই" 
           style={{ 
             width: '100%', 
             height: '100%', 
@@ -225,27 +225,27 @@ export default function Home() {
             EST. IN KHOAI VALLEY · NH-60
           </motion.div>
 
-          {/* Bengali heading */}
-          <motion.div
-            className="khoai-teal-glow"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: heroReady ? 1 : 0, y: heroReady ? 0 : 20 }}
-            transition={{ delay: 0.5, duration: 1.1 }}
-            style={{ fontFamily: '"Tiro Bangla", serif', fontSize: 'clamp(52px,12vw,110px)', color: '#00E5CC', lineHeight: 1, marginBottom: '16px' }}
-          >
-            খোয়াই
-          </motion.div>
-
-          {/* English heading */}
-          <motion.div
-            className="khoai-gold-glow"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: heroReady ? 1 : 0, y: heroReady ? 0 : 20 }}
-            transition={{ delay: 0.8, duration: 1 }}
-            style={{ fontFamily: '"Playfair Display", serif', fontSize: 'clamp(22px,6vw,60px)', color: '#E8B84B', letterSpacing: 'clamp(4px,1.5vw,10px)', marginBottom: '18px' }}
-          >
-            Hotel Khoai
-          </motion.div>
+          {/* combined bilingual heading */}
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px', marginBottom: '20px' }}>
+            <motion.div
+              className="khoai-teal-glow"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: heroReady ? 1 : 0, y: heroReady ? 0 : 20 }}
+              transition={{ delay: 0.5, duration: 1.1 }}
+              style={{ fontFamily: '"Tiro Bangla", serif', fontSize: 'clamp(56px,12vw,110px)', color: '#00E5CC', lineHeight: 1 }}
+            >
+              খোয়াই
+            </motion.div>
+            <motion.div
+              className="khoai-gold-glow"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: heroReady ? 1 : 0, y: heroReady ? 0 : 20 }}
+              transition={{ delay: 0.8, duration: 1 }}
+              style={{ fontFamily: '"Playfair Display", serif', fontSize: 'clamp(28px,6vw,56px)', color: '#E8B84B', letterSpacing: 'clamp(6px,1.5vw,12px)', textTransform: 'uppercase', fontWeight: 500 }}
+            >
+              Hotel
+            </motion.div>
+          </div>
 
           {/* Tagline */}
           <motion.p
@@ -325,7 +325,7 @@ export default function Home() {
             {/* Decorative line */}
             <div style={{ width: '48px', height: '1px', background: 'linear-gradient(90deg,#E8B84B,transparent)', marginBottom: '24px' }} />
             <p style={{ color: '#9C8A6E', lineHeight: 1.9, fontSize: 'clamp(14px,2vw,15px)', marginBottom: '36px' }}>
-              Perched on the curves of NH-60 in the verdant Khoai Valley, Hotel Khoai was born from an unwavering passion for authentic Bengali cuisine and a deep love for the region's folk art heritage. Every bamboo pillar, every hand-painted mural tells a story.
+              Perched on the curves of NH-60 in the verdant Khoai Valley, Hotel খোয়াই was born from an unwavering passion for authentic Bengali cuisine and a deep love for the region's folk art heritage. Every bamboo pillar, every hand-painted mural tells a story.
             </p>
             <Link to="/our-story" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', color: '#E8B84B', textDecoration: 'none', fontSize: '13px', letterSpacing: '1.5px', textTransform: 'uppercase', borderBottom: '1px solid rgba(232,184,75,0.4)', paddingBottom: '4px' }}>
               Read Our Story <ArrowRight size={13} />

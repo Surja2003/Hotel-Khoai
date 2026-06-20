@@ -3,18 +3,18 @@ import { motion, AnimatePresence } from 'motion/react';
 import Masonry from 'react-responsive-masonry';
 import ResponsiveMasonry from 'react-responsive-masonry';
 
-type GalleryItem = { id: number; title: string; subtitle: string; category: 'indoor' | 'outdoor' | 'night'; gradient: string; height: number; accent: string; image?: string };
+type GalleryItem = { id: number; title: string; subtitle: string; category: 'indoor' | 'outdoor' | 'night'; image: string; height: number; accent: string };
 
 const items: GalleryItem[] = [
-  { id: 1, title: 'The Bamboo Hall', subtitle: 'Hand-woven ceiling, warm lantern light', category: 'indoor', gradient: 'linear-gradient(160deg,#3D1E00,#8B4500,#2A1200)', height: 300, accent: '#E8B84B' },
-  { id: 2, title: 'Fairy Lit Gazebo', subtitle: 'Hundreds of lights in the valley dark', category: 'outdoor', gradient: 'linear-gradient(150deg,#14002A,#5000A0,#0A0018)', height: 220, accent: '#9B59B6', image: '/assets/gazebo_night.png' },
-  { id: 3, title: 'Folk Art Walls', subtitle: 'Santali-inspired tribal murals', category: 'indoor', gradient: 'linear-gradient(155deg,#002818,#008060,#001208)', height: 260, accent: '#00E5CC' },
-  { id: 4, title: 'Open Kitchen', subtitle: 'Where flavours come to life', category: 'indoor', gradient: 'linear-gradient(160deg,#2D0800,#8B2800,#1A0400)', height: 200, accent: '#FF6B35' },
-  { id: 5, title: 'Starlit Terrace', subtitle: 'Open-air under the Khoai sky', category: 'night', gradient: 'linear-gradient(150deg,#060810,#14183A,#030408)', height: 340, accent: '#00E5CC' },
-  { id: 6, title: 'Riverside Corner', subtitle: 'A table with a view', category: 'outdoor', gradient: 'linear-gradient(155deg,#001522,#004468,#000810)', height: 250, accent: '#4BE8D4' },
-  { id: 7, title: 'The Dining Room', subtitle: 'Classic warmth, rustic detail', category: 'indoor', gradient: 'linear-gradient(160deg,#1A1000,#5A3600,#100A00)', height: 210, accent: '#E8B84B' },
-  { id: 8, title: 'Night Vibes', subtitle: 'The magic hour at Khoai', category: 'night', gradient: 'linear-gradient(150deg,#080412,#20103A,#040208)', height: 320, accent: '#9B59B6' },
-  { id: 9, title: 'Bamboo Entrance', subtitle: 'First impressions that last', category: 'outdoor', gradient: 'linear-gradient(155deg,#1A1000,#6B4400,#100800)', height: 230, accent: '#E8B84B', image: '/assets/hotel_exterior.png' },
+  { id: 15, title: 'Traditional Bengali Thali', subtitle: 'Steaming rice, curries, and sweets with marigolds', category: 'indoor', image: '/assets/hotel_img_15.jpeg', height: 320, accent: '#E8B84B' },
+  { id: 26, title: 'Bengali Thali Platter', subtitle: 'Traditional brass thali layout with marigolds', category: 'indoor', image: '/assets/hotel_img_26.jpeg', height: 340, accent: '#00E5CC' },
+  { id: 6, title: 'Bamboo Dining Room', subtitle: 'Earthy wooden benches and table setups', category: 'indoor', image: '/assets/hotel_img_6.jpeg', height: 260, accent: '#00E5CC' },
+  { id: 10, title: 'Bamboo Hall Seating', subtitle: 'Handmade bamboo structure with glowing lights', category: 'indoor', image: '/assets/hotel_img_10.jpeg', height: 340, accent: '#E8B84B' },
+  { id: 28, title: 'Bamboo Hall Table View', subtitle: 'Hand-woven roof and lanterns in the dining hall', category: 'indoor', image: '/assets/hotel_img_28.jpeg', height: 350, accent: '#9B59B6' },
+  { id: 3, title: 'Rustic Gazebo Table', subtitle: 'Thatched roof outdoor dining seating', category: 'outdoor', image: '/assets/hotel_img_3.jpeg', height: 320, accent: '#00E5CC' },
+  { id: 9, title: 'Evening Gazebo Seating', subtitle: 'Palm trees and lights surrounding the gazebo', category: 'outdoor', image: '/assets/hotel_img_9.jpeg', height: 210, accent: '#00E5CC' },
+  { id: 24, title: 'Main Facade at Night', subtitle: 'Bamboo structure glowing under the stars', category: 'night', image: '/assets/hotel_img_24.jpeg', height: 270, accent: '#9B59B6' },
+  { id: 30, title: 'Hotel Signboard Entrance', subtitle: 'Umbrellas and hanging lights at the entrance', category: 'night', image: '/assets/hotel_img_30.jpeg', height: 330, accent: '#E8B84B' },
 ];
 
 const filters = [
@@ -40,7 +40,6 @@ function GalleryCard({ item }: { item: GalleryItem }) {
       style={{
         borderRadius: '10px',
         overflow: 'hidden',
-        background: item.image ? `linear-gradient(to bottom, rgba(13,10,7,0.15) 0%, rgba(13,10,7,0.85) 100%), url("${item.image}") center/cover no-repeat` : item.gradient,
         height: `${item.height}px`,
         position: 'relative',
         border: hovered ? `1px solid ${item.accent}44` : '1px solid rgba(255,255,255,0.04)',
@@ -49,8 +48,30 @@ function GalleryCard({ item }: { item: GalleryItem }) {
         transform: hovered ? 'scale(1.015)' : 'scale(1)',
         cursor: 'pointer',
         marginBottom: '0',
+        backgroundColor: '#120E0A',
       }}
     >
+      <img
+        src={item.image}
+        alt={item.title}
+        loading="lazy"
+        style={{
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          transition: 'transform 0.5s ease',
+          transform: hovered ? 'scale(1.05)' : 'scale(1)',
+        }}
+      />
+      
+      {/* Dark gradient overlay for text readability */}
+      <div style={{
+        position: 'absolute',
+        inset: 0,
+        background: 'linear-gradient(to bottom, rgba(13,10,7,0.15) 0%, rgba(13,10,7,0.4) 60%, rgba(5,3,2,0.95) 100%)',
+        pointerEvents: 'none',
+      }} />
+
       {/* Folk-eye watermark */}
       <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', opacity: 0.06, pointerEvents: 'none' }}>
         <svg width="70" height="50" viewBox="0 0 70 50">
@@ -117,7 +138,7 @@ export default function Gallery() {
   return (
     <div style={{ backgroundColor: '#0D0A07' }}>
       {/* Page hero */}
-      <section style={{ padding: 'clamp(100px,14vw,160px) 24px clamp(40px,6vw,70px)', background: 'radial-gradient(ellipse at 30% 100%, #1A0D00 0%, #0D0A07 55%)', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
+      <section style={{ padding: 'clamp(100px,14vw,160px) 24px clamp(40px,6vw,80px)', background: 'radial-gradient(ellipse at 30% 100%, #1A0D00 0%, #0D0A07 55%)', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', pointerEvents: 'none', overflow: 'hidden' }}>
           <div style={{ fontFamily: '"Tiro Bangla", serif', fontSize: 'clamp(120px,30vw,260px)', color: '#00E5CC', opacity: 0.025, lineHeight: 1 }}>দৃশ্য</div>
         </div>
@@ -126,7 +147,7 @@ export default function Gallery() {
           <h1 style={{ fontFamily: '"Playfair Display", serif', fontSize: 'clamp(32px,7vw,72px)', color: '#F5ECD7', lineHeight: 1.15, marginBottom: '14px' }}>Gallery</h1>
           <div style={{ fontFamily: '"Tiro Bangla", serif', color: '#00E5CC', fontSize: 'clamp(18px,3vw,28px)', marginBottom: '20px', textShadow: '0 0 30px rgba(0,229,204,0.35)' }}>আমাদের গ্যালারি</div>
           <p style={{ color: '#9C8A6E', maxWidth: '480px', margin: '0 auto', lineHeight: 1.85, fontSize: 'clamp(13px,2vw,15px)' }}>
-            Glimpses of our spaces — from bamboo interiors to fairy-lit gazebos under the Khoai Valley sky.
+            Glimpses of our spaces — from bamboo interiors to fairy-lit gazebos and celebratory garden layouts under the Khoai Valley sky.
           </p>
         </motion.div>
       </section>

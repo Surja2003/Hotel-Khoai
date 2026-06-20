@@ -72,8 +72,10 @@ export function Preloader({ progress }: PreloaderProps) {
         transition={{ delay: 0.5, duration: 0.6 }}
         style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', gap: '4px' }}
       >
-        <div style={{ fontFamily: '"Tiro Bangla", serif', color: '#9C8A6E', fontSize: '16px', letterSpacing: '1px' }}>হোটেল খোয়াই</div>
-        <div style={{ fontFamily: '"Playfair Display", serif', color: '#E8B84B', fontSize: '10px', letterSpacing: '5px' }}>KHOAI</div>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+          <span style={{ fontFamily: '"Playfair Display", serif', color: '#E8B84B', fontSize: '20px', fontWeight: 600 }}>Hotel</span>
+          <span style={{ fontFamily: '"Tiro Bangla", serif', color: '#00E5CC', fontSize: '20px' }}>খোয়াই</span>
+        </div>
       </motion.div>
 
       {/* Progress bar */}

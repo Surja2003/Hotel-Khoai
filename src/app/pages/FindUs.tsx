@@ -17,7 +17,7 @@ const contactItems = [
     label: 'Location',
     content: (
       <>
-        <div style={{ color: '#F5ECD7', fontSize: 'clamp(14px,2vw,15px)', marginBottom: '6px', fontFamily: '"Playfair Display", serif' }}>Hotel Khoai (হোটেল খোয়াই)</div>
+        <div style={{ color: '#F5ECD7', fontSize: 'clamp(14px,2vw,15px)', marginBottom: '6px', fontFamily: '"Playfair Display", serif' }}>Hotel খোয়াই</div>
         <div style={{ color: '#9C8A6E', fontSize: '14px', lineHeight: 1.75 }}>
           National Highway 60, Khoai<br />Tripura, India
         </div>
@@ -109,7 +109,7 @@ function MapPlaceholder() {
 
       {/* Label */}
       <div style={{ position: 'absolute', bottom: '20px', left: '50%', transform: 'translateX(-50%)', backgroundColor: 'rgba(13,10,7,0.92)', border: '1px solid rgba(232,184,75,0.25)', borderRadius: '6px', padding: '10px 20px', textAlign: 'center', whiteSpace: 'nowrap', backdropFilter: 'blur(8px)' }}>
-        <div style={{ color: '#E8B84B', fontSize: '11px', letterSpacing: '1.5px', marginBottom: '3px', fontWeight: 600 }}>HOTEL KHOAI</div>
+        <div style={{ color: '#E8B84B', fontSize: '11px', letterSpacing: '1.5px', marginBottom: '3px', fontWeight: 600 }}>HOTEL খোয়াই</div>
         <div style={{ color: '#9C8A6E', fontSize: '11px' }}>NH-60, Khoai Valley, Tripura</div>
       </div>
     </div>

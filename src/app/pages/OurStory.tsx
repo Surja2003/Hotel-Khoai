@@ -48,7 +48,7 @@ function StoryVisuals() {
       }}>
         <img 
           src="/assets/hotel_exterior.png" 
-          alt="Hotel Khoai Exterior" 
+          alt="Hotel খোয়াই Exterior" 
           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
         />
         <div style={{
@@ -139,7 +139,7 @@ export default function OurStory() {
           <h1 style={{ fontFamily: '"Playfair Display", serif', fontSize: 'clamp(32px,7vw,72px)', color: '#F5ECD7', lineHeight: 1.15, marginBottom: '14px' }}>Our Story</h1>
           <div style={{ fontFamily: '"Tiro Bangla", serif', color: '#00E5CC', fontSize: 'clamp(18px,3vw,28px)', marginBottom: '20px', textShadow: '0 0 30px rgba(0,229,204,0.35)' }}>আমাদের গল্প</div>
           <p style={{ color: '#9C8A6E', maxWidth: '520px', margin: '0 auto', lineHeight: 1.9, fontSize: 'clamp(13px,2vw,15px)' }}>
-            From a humble roadside eatery to a destination — the story of Hotel Khoai is one of roots, resilience, and flavour.
+            From a humble roadside eatery to a destination — the story of Hotel খোয়াই is one of roots, resilience, and flavour.
           </p>
         </motion.div>
       </section>
@@ -157,9 +157,9 @@ export default function OurStory() {
             </div>
 
             {[
-              'Hotel Khoai was born in 2016 from a single unwavering belief: that Bengali food, cooked with honesty and served with warmth, is enough to stop a traveller in their tracks. Perched on the curves of NH-60 in the verdant Khoai Valley of Tripura, what began as a handful of chairs and a clay stove has grown into one of the most beloved dining destinations in the region.',
-              'The restaurant takes its name from the Khoai river — a thread of silver that meanders through bamboo groves and paddy fields, shaping the character of this valley. Like the river, Hotel Khoai winds its way through Bengali culinary tradition: from the pungent golden bite of Sorshe Ilish to the slow-cooked depths of our signature Handi Mutton.',
-              'The walls here are canvases for Santali folk art, painted by local artisans whose ancestors etched similar patterns on bark and clay for centuries. The bamboo dining hall breathes with the forest. The fairy-lit outdoor gazebo glows like a lantern in the valley dark. At Hotel Khoai, eating is not just dining — it is an act of belonging.'
+              'Hotel খোয়াই was born in 2016 from a single unwavering belief: that Bengali food, cooked with honesty and served with warmth, is enough to stop a traveller in their tracks. Perched on the curves of NH-60 in the verdant Khoai Valley of Tripura, what began as a handful of chairs and a clay stove has grown into one of the most beloved dining destinations in the region.',
+              'The restaurant takes its name from the Khoai river — a thread of silver that meanders through bamboo groves and paddy fields, shaping the character of this valley. Like the river, Hotel খোয়াই winds its way through Bengali culinary tradition: from the pungent golden bite of Sorshe Ilish to the slow-cooked depths of our signature Handi Mutton.',
+              'The walls here are canvases for Santali folk art, painted by local artisans whose ancestors etched similar patterns on bark and clay for centuries. The bamboo dining hall breathes with the forest. The fairy-lit outdoor gazebo glows like a lantern in the valley dark. At Hotel খোয়াই, eating is not just dining — it is an act of belonging.'
             ].map((para, i) => (
               <motion.p key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: i * 0.12 }} viewport={{ once: true }}
                 style={{ color: '#9C8A6E', lineHeight: 1.95, fontSize: 'clamp(13px,2vw,15px)', marginBottom: '22px' }}
