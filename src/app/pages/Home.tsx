@@ -207,26 +207,18 @@ export default function Home() {
 
       {/* ── HERO ── */}
       <section className="khoai-hero-section">
-        {/* Background Image — full image visible on mobile (contain), full-bleed on PC (cover) */}
-        <img
-          src="/assets/hotel_exterior.png"
-          alt="Hotel খোয়াই exterior"
-          className="khoai-hero-img"
-          fetchPriority="high"
-          decoding="async"
-        />
-        {/* Dark gradient overlay for text readability */}
-        <div className="khoai-hero-overlay" />
+        {/* Background Image Layer with responsive blur */}
+        <div className="khoai-hero-bg" />
 
         {/* Bamboo weave bg */}
-        <div style={{ position: 'absolute', inset: 0, zIndex: 1, opacity: 0.032, backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cpath d='M0 0L60 60M-15 15L45 75M15-15L75 45' stroke='%23E8B84B' stroke-width='1' fill='none'/%3E%3C/svg%3E")`, backgroundRepeat: 'repeat' }} />
+        <div style={{ position: 'absolute', inset: 0, opacity: 0.032, backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cpath d='M0 0L60 60M-15 15L45 75M15-15L75 45' stroke='%23E8B84B' stroke-width='1' fill='none'/%3E%3C/svg%3E")`, backgroundRepeat: 'repeat' }} />
 
         {/* Hero content */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: heroReady ? 1 : 0 }}
           transition={{ duration: 1.1, delay: 0.1 }}
-          style={{ position: 'relative', zIndex: 2, textAlign: 'center', padding: '100px 24px 80px', maxWidth: '880px', width: '100%' }}
+          style={{ position: 'relative', zIndex: 1, textAlign: 'center', padding: '100px 24px 80px', maxWidth: '880px', width: '100%' }}
         >
           {/* Badge */}
           <motion.div initial={{ opacity: 0, scale: 0.85 }} animate={{ opacity: heroReady ? 1 : 0, scale: heroReady ? 1 : 0.85 }} transition={{ delay: 0.3, duration: 0.7 }}
@@ -298,7 +290,7 @@ export default function Home() {
 
         {/* Scroll indicator */}
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: heroReady ? 1 : 0 }} transition={{ delay: 2.2 }}
-          style={{ position: 'absolute', bottom: '32px', left: 0, right: 0, zIndex: 2, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', color: '#4A3F30', fontSize: '10px', letterSpacing: '3px' }}
+          style={{ position: 'absolute', bottom: '32px', left: 0, right: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', color: '#4A3F30', fontSize: '10px', letterSpacing: '3px' }}
         >
           <div style={{ marginBottom: '8px' }}>DISCOVER</div>
           <motion.div animate={{ y: [0, 8, 0] }} transition={{ repeat: Infinity, duration: 1.8 }}>
@@ -307,7 +299,7 @@ export default function Home() {
         </motion.div>
 
         {/* Wave divider */}
-        <div style={{ position: 'absolute', bottom: -1, left: 0, right: 0, zIndex: 2, lineHeight: 0 }}>
+        <div style={{ position: 'absolute', bottom: -1, left: 0, right: 0, lineHeight: 0 }}>
           <svg viewBox="0 0 1440 64" style={{ display: 'block', width: '100%' }} xmlns="http://www.w3.org/2000/svg">
             <path d="M0,32 C360,64 1080,0 1440,32 L1440,64 L0,64 Z" fill="#111009" />
           </svg>

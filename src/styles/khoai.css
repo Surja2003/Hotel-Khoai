@@ -175,65 +175,27 @@ html { scroll-behavior: smooth; }
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background-color: #0D0A07;
 }
 
-/* The actual hotel photo */
-.khoai-hero-img {
+.khoai-hero-bg {
   position: absolute;
   inset: 0;
   z-index: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;          /* Desktop: full-bleed, fills screen */
-  object-position: center center;
-  display: block;
+  background-image: linear-gradient(180deg, rgba(13,10,7,0.6) 0%, rgba(13,10,7,0.88) 100%), url("/assets/hotel_exterior.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: filter 0.3s ease, transform 0.3s ease;
 }
 
-/* Dark gradient overlay — sits above the image */
-.khoai-hero-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background: linear-gradient(
-    180deg,
-    rgba(13,10,7,0.55) 0%,
-    rgba(13,10,7,0.35) 40%,
-    rgba(13,10,7,0.82) 100%
-  );
-}
-
-/* Mobile: image anchored at bottom, natural proportions — sign goes above visible frame */
 @media (max-width: 768px) {
-  .khoai-hero-section {
-    /* Section height = natural image height at mobile width (56vw) + content space */
-    min-height: calc(56vw + 180px);
-  }
-  .khoai-hero-img {
-    /* Bottom-anchored, full width, auto height = natural proportions, NO crop on height */
-    /* Image is 1191x663 (1.8:1 landscape). At 390px wide → 217px tall.              */
-    /* The sign lives in top 50% of image → goes ABOVE the visible section frame.    */
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    inset: unset;
-    width: 100%;
-    height: auto;
-    object-fit: unset;
-    object-position: unset;
-    filter: none; /* NO blur */
-  }
-  .khoai-hero-overlay {
-    background: linear-gradient(
-      180deg,
-      rgba(13,10,7,0.82) 0%,
-      rgba(13,10,7,0.45) 50%,
-      rgba(13,10,7,0.80) 100%
-    );
+  .khoai-hero-bg {
+    /* Shifts position and applies blur to remove double-text overlap, creating a beautiful depth-of-field effect */
+    background-position: 72% 35%;
+    filter: blur(6px);
+    transform: scale(1.08); /* prevents white bleed edges from blur */
+    background-image: linear-gradient(180deg, rgba(13,10,7,0.7) 0%, rgba(13,10,7,0.92) 100%), url("/assets/hotel_exterior.png");
   }
 }
-
-
 
 
