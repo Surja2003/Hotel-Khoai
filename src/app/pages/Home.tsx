@@ -225,27 +225,39 @@ export default function Home() {
             EST. IN KHOAI VALLEY · NH-60
           </motion.div>
 
-          {/* combined bilingual heading */}
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px', marginBottom: '20px' }}>
-            <motion.div
-              className="khoai-teal-glow"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: heroReady ? 1 : 0, y: heroReady ? 0 : 20 }}
-              transition={{ delay: 0.5, duration: 1.1 }}
-              style={{ fontFamily: '"Tiro Bangla", serif', fontSize: 'clamp(56px,12vw,110px)', color: '#00E5CC', lineHeight: 1 }}
-            >
-              খোয়াই
-            </motion.div>
-            <motion.div
-              className="khoai-gold-glow"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: heroReady ? 1 : 0, y: heroReady ? 0 : 20 }}
-              transition={{ delay: 0.8, duration: 1 }}
-              style={{ fontFamily: '"Playfair Display", serif', fontSize: 'clamp(28px,6vw,56px)', color: '#E8B84B', letterSpacing: 'clamp(6px,1.5vw,12px)', textTransform: 'uppercase', fontWeight: 500 }}
-            >
+          {/* combined bilingual heading on the same line */}
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: heroReady ? 1 : 0, y: heroReady ? 0 : 20 }}
+            transition={{ delay: 0.6, duration: 1.1 }}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              flexWrap: 'wrap',
+              gap: 'clamp(10px, 3vw, 24px)',
+              margin: '0 auto 20px',
+              lineHeight: 1.15,
+            }}
+          >
+            <span style={{ 
+              fontFamily: '"Playfair Display", serif', 
+              color: '#E8B84B', 
+              fontSize: 'clamp(38px, 8vw, 84px)',
+              fontWeight: 600,
+              textShadow: '0 0 30px rgba(232,184,75,0.2)'
+            }}>
               Hotel
-            </motion.div>
-          </div>
+            </span>
+            <span style={{ 
+              fontFamily: '"Tiro Bangla", serif', 
+              color: '#00E5CC', 
+              fontSize: 'clamp(44px, 9vw, 96px)',
+              textShadow: '0 0 30px rgba(0,229,204,0.3)'
+            }}>
+              খোয়াই
+            </span>
+          </motion.h1>
 
           {/* Tagline */}
           <motion.p
