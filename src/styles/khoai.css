@@ -210,8 +210,8 @@ html { scroll-behavior: smooth; }
     min-height: calc(56vw + 160px);
   }
   .khoai-hero-img {
-    object-fit: cover;           /* Cropped, but much less than full-screen height */
-    object-position: center 55%; /* Focus on hotel entrance / sign area */
+    object-fit: cover;
+    object-position: center bottom; /* Show entrance area, sign moves out of frame */
   }
   .khoai-hero-overlay {
     background: linear-gradient(
@@ -222,5 +222,6 @@ html { scroll-behavior: smooth; }
     );
   }
 }
+
 
 
