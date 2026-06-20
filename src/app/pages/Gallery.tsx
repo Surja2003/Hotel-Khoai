@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import Masonry from 'react-responsive-masonry';
-import ResponsiveMasonry from 'react-responsive-masonry';
+import { ZoomIn, X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 type GalleryItem = { id: number; title: string; subtitle: string; category: 'indoor' | 'outdoor' | 'night'; image: string; height: number; accent: string };
 
@@ -35,7 +34,7 @@ const filters = [
   { key: 'night', label: 'Night' },
 ];
 
-function GalleryCard({ item }: { item: GalleryItem }) {
+function GalleryCard({ item, onClick }: { item: GalleryItem; onClick: () => void }) {
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -48,6 +47,7 @@ function GalleryCard({ item }: { item: GalleryItem }) {
       onMouseLeave={() => setHovered(false)}
       onTouchStart={() => setHovered(true)}
       onTouchEnd={() => setTimeout(() => setHovered(false), 800)}
+      onClick={onClick}
       style={{
         borderRadius: '10px',
         overflow: 'hidden',
@@ -58,9 +58,9 @@ function GalleryCard({ item }: { item: GalleryItem }) {
         boxShadow: hovered ? `0 12px 48px ${item.accent}20, 0 0 0 1px ${item.accent}22` : '0 4px 20px rgba(0,0,0,0.4)',
         transform: hovered ? 'scale(1.015)' : 'scale(1)',
         cursor: 'pointer',
-        marginBottom: '0',
         backgroundColor: '#120E0A',
       }}
+      className="khoai-gallery-item-inner"
     >
       <img
         src={item.image}
@@ -109,14 +109,25 @@ function GalleryCard({ item }: { item: GalleryItem }) {
         {item.category.toUpperCase()}
       </div>
 
-      {/* Hover shimmer overlay */}
-      {hovered && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          style={{ position: 'absolute', inset: 0, background: `radial-gradient(circle at center, ${item.accent}10 0%, transparent 70%)`, pointerEvents: 'none' }}
-        />
-      )}
+      {/* Hover zoom icon indicator */}
+      <div style={{
+        position: 'absolute',
+        top: '12px',
+        left: '12px',
+        background: 'rgba(13,10,7,0.5)',
+        border: '1px solid rgba(255,255,255,0.1)',
+        borderRadius: '50%',
+        width: '32px',
+        height: '32px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        opacity: hovered ? 1 : 0,
+        transition: 'opacity 0.25s ease',
+        color: '#E8B84B',
+      }}>
+        <ZoomIn size={14} />
+      </div>
 
       {/* Bottom caption */}
       <div style={{
@@ -144,10 +155,32 @@ function GalleryCard({ item }: { item: GalleryItem }) {
 
 export default function Gallery() {
   const [active, setActive] = useState('all');
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+
   const filtered = active === 'all' ? items : items.filter(i => i.category === active);
 
+  const openLightbox = (itemIndex: number) => {
+    setLightboxIndex(itemIndex);
+  };
+
+  const closeLightbox = () => {
+    setLightboxIndex(null);
+  };
+
+  const showPrev = () => {
+    if (lightboxIndex !== null) {
+      setLightboxIndex((prev) => (prev === 0 ? filtered.length - 1 : (prev ?? 0) - 1));
+    }
+  };
+
+  const showNext = () => {
+    if (lightboxIndex !== null) {
+      setLightboxIndex((prev) => (prev === filtered.length - 1 ? 0 : (prev ?? 0) + 1));
+    }
+  };
+
   return (
-    <div style={{ backgroundColor: '#0D0A07' }}>
+    <div style={{ backgroundColor: '#0D0A07', minHeight: '100vh' }}>
       {/* Page hero */}
       <section style={{ padding: 'clamp(100px,14vw,160px) 24px clamp(40px,6vw,80px)', background: 'radial-gradient(ellipse at 30% 100%, #1A0D00 0%, #0D0A07 55%)', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', pointerEvents: 'none', overflow: 'hidden' }}>
@@ -199,18 +232,23 @@ export default function Gallery() {
         </div>
       </div>
 
-      {/* Masonry */}
+      {/* Masonry Section */}
       <section style={{ padding: 'clamp(32px,4vw,52px) 24px clamp(60px,8vw,100px)' }}>
         <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
           <AnimatePresence mode="wait">
-            <motion.div key={active} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }}>
-              <ResponsiveMasonry columnsCountBreakPoints={{ 320: 1, 600: 2, 1024: 3 }}>
-                <Masonry gutter="14px">
-                  {filtered.map(item => (
-                    <GalleryCard key={item.id} item={item} />
-                  ))}
-                </Masonry>
-              </ResponsiveMasonry>
+            <motion.div
+              key={active}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="khoai-gallery-masonry"
+            >
+              {filtered.map((item, index) => (
+                <div key={item.id} className="khoai-gallery-item-wrapper">
+                  <GalleryCard item={item} onClick={() => openLightbox(index)} />
+                </div>
+              ))}
             </motion.div>
           </AnimatePresence>
 
@@ -220,12 +258,206 @@ export default function Gallery() {
         </div>
       </section>
 
+      {/* ── LIGHTBOX MODAL ── */}
+      <AnimatePresence>
+        {lightboxIndex !== null && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            style={{
+              position: 'fixed',
+              inset: 0,
+              backgroundColor: 'rgba(5,3,2,0.98)',
+              zIndex: 99999,
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: '20px',
+            }}
+          >
+            {/* Header / Controls */}
+            <div style={{
+              position: 'absolute',
+              top: '20px',
+              left: '20px',
+              right: '20px',
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              color: '#F5ECD7',
+              zIndex: 2,
+            }}>
+              <div>
+                <h3 style={{ fontFamily: '"Playfair Display", serif', fontSize: 'clamp(16px, 2.5vw, 22px)', color: '#F5ECD7', margin: 0, lineHeight: 1.25 }}>
+                  {filtered[lightboxIndex].title}
+                </h3>
+                <span style={{ color: '#E8B84B', fontSize: '11px', letterSpacing: '2.5px', textTransform: 'uppercase' }}>
+                  Image {lightboxIndex + 1} of {filtered.length} · {filtered[lightboxIndex].category.toUpperCase()}
+                </span>
+              </div>
+              <button
+                onClick={closeLightbox}
+                style={{
+                  background: 'rgba(255,255,255,0.08)',
+                  border: '1px solid rgba(255,255,255,0.15)',
+                  borderRadius: '50%',
+                  width: '44px',
+                  height: '44px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  cursor: 'pointer',
+                  color: '#F5ECD7',
+                  transition: 'background-color 0.2s',
+                }}
+                aria-label="Close zoomed view"
+              >
+                <X size={20} />
+              </button>
+            </div>
+
+            {/* Navigation buttons */}
+            <button
+              onClick={showPrev}
+              style={{
+                position: 'absolute',
+                left: '20px',
+                background: 'rgba(255,255,255,0.06)',
+                border: '1px solid rgba(255,255,255,0.1)',
+                borderRadius: '50%',
+                width: '52px',
+                height: '52px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                cursor: 'pointer',
+                color: '#F5ECD7',
+                zIndex: 2,
+                userSelect: 'none',
+              }}
+              className="hidden md:flex"
+            >
+              <ChevronLeft size={24} />
+            </button>
+
+            <button
+              onClick={showNext}
+              style={{
+                position: 'absolute',
+                right: '20px',
+                background: 'rgba(255,255,255,0.06)',
+                border: '1px solid rgba(255,255,255,0.1)',
+                borderRadius: '50%',
+                width: '52px',
+                height: '52px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                cursor: 'pointer',
+                color: '#F5ECD7',
+                zIndex: 2,
+                userSelect: 'none',
+              }}
+              className="hidden md:flex"
+            >
+              <ChevronRight size={24} />
+            </button>
+
+            {/* Lightbox Content Area */}
+            <div
+              style={{
+                width: '100%',
+                maxWidth: '900px',
+                height: '80vh',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                position: 'relative',
+              }}
+            >
+              <motion.img
+                key={lightboxIndex}
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.25 }}
+                src={filtered[lightboxIndex].image}
+                alt={filtered[lightboxIndex].title}
+                style={{
+                  maxHeight: '100%',
+                  maxWidth: '100%',
+                  objectFit: 'contain',
+                  borderRadius: '8px',
+                  boxShadow: '0 24px 64px rgba(0,0,0,0.8)',
+                  touchAction: 'pan-y pinch-zoom',
+                }}
+              />
+              <div style={{
+                color: '#9C8A6E',
+                fontSize: '13px',
+                marginTop: '16px',
+                textAlign: 'center',
+                maxWidth: '600px',
+                lineHeight: 1.6,
+                padding: '0 10px',
+              }}>
+                {filtered[lightboxIndex].subtitle}
+              </div>
+            </div>
+
+            {/* Bottom Mobile navigation indicator buttons */}
+            <div style={{ display: 'flex', gap: '20px', marginTop: '10px', zIndex: 2 }}>
+              <button
+                onClick={showPrev}
+                style={{
+                  background: 'rgba(255,255,255,0.06)',
+                  border: '1px solid rgba(255,255,255,0.1)',
+                  borderRadius: '100px',
+                  padding: '8px 16px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '4px',
+                  color: '#F5ECD7',
+                  cursor: 'pointer',
+                  fontSize: '12px',
+                }}
+                className="flex md:hidden"
+              >
+                <ChevronLeft size={16} /> Prev
+              </button>
+              <button
+                onClick={showNext}
+                style={{
+                  background: 'rgba(255,255,255,0.06)',
+                  border: '1px solid rgba(255,255,255,0.1)',
+                  borderRadius: '100px',
+                  padding: '8px 16px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '4px',
+                  color: '#F5ECD7',
+                  cursor: 'pointer',
+                  fontSize: '12px',
+                }}
+                className="flex md:hidden"
+              >
+                Next <ChevronRight size={16} />
+              </button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Pull quote */}
       <section style={{ padding: 'clamp(48px,6vw,80px) 24px', borderTop: '1px solid rgba(232,184,75,0.08)', textAlign: 'center' }}>
         <div style={{ maxWidth: '640px', margin: '0 auto' }}>
           <div style={{ width: '48px', height: '1px', background: 'linear-gradient(90deg,transparent,rgba(232,184,75,0.5),transparent)', margin: '0 auto 28px' }} />
           <blockquote style={{ fontFamily: '"Playfair Display", serif', fontSize: 'clamp(16px,2.5vw,24px)', color: '#F5ECD7', lineHeight: 1.7, fontStyle: 'italic', marginBottom: '18px' }}>
-            "Every corner of Hotel Khoai is a frame-worthy moment."
+            "Every corner of Hotel খোয়াই is a frame-worthy moment."
           </blockquote>
           <div style={{ color: '#4A3F30', fontSize: '11px', letterSpacing: '2.5px', textTransform: 'uppercase' }}>A Guest Review</div>
           <div style={{ width: '48px', height: '1px', background: 'linear-gradient(90deg,transparent,rgba(232,184,75,0.5),transparent)', margin: '28px auto 0' }} />

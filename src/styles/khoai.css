@@ -144,3 +144,25 @@ html { scroll-behavior: smooth; }
 @media (max-width: 768px) {
   button, a { -webkit-tap-highlight-color: transparent; }
 }
+
+/* ── Pure CSS Gallery Masonry Grid ── */
+.khoai-gallery-masonry {
+  column-count: 3;
+  column-gap: 14px;
+  width: 100%;
+}
+@media (max-width: 1024px) {
+  .khoai-gallery-masonry {
+    column-count: 2;
+  }
+}
+@media (max-width: 600px) {
+  .khoai-gallery-masonry {
+    column-count: 1;
+  }
+}
+.khoai-gallery-item-wrapper {
+  break-inside: avoid;
+  margin-bottom: 14px;
+}
+
