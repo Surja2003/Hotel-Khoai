@@ -206,7 +206,7 @@ export default function Home() {
       </AnimatePresence>
 
       {/* ── HERO ── */}
-      <section style={{ position: 'relative', minHeight: '100svh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', background: 'linear-gradient(180deg, rgba(13,10,7,0.65) 0%, rgba(13,10,7,0.88) 100%), url("/assets/hotel_exterior.png") center/cover no-repeat' }}>
+      <section className="khoai-hero-section">
         {/* Bamboo weave bg */}
         <div style={{ position: 'absolute', inset: 0, opacity: 0.032, backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cpath d='M0 0L60 60M-15 15L45 75M15-15L75 45' stroke='%23E8B84B' stroke-width='1' fill='none'/%3E%3C/svg%3E")`, backgroundRepeat: 'repeat' }} />
 
