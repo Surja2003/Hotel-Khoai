@@ -6,15 +6,26 @@ import ResponsiveMasonry from 'react-responsive-masonry';
 type GalleryItem = { id: number; title: string; subtitle: string; category: 'indoor' | 'outdoor' | 'night'; image: string; height: number; accent: string };
 
 const items: GalleryItem[] = [
-  { id: 15, title: 'Traditional Bengali Thali', subtitle: 'Steaming rice, curries, and sweets with marigolds', category: 'indoor', image: '/assets/hotel_img_15.jpeg', height: 320, accent: '#E8B84B' },
-  { id: 26, title: 'Bengali Thali Platter', subtitle: 'Traditional brass thali layout with marigolds', category: 'indoor', image: '/assets/hotel_img_26.jpeg', height: 340, accent: '#00E5CC' },
-  { id: 6, title: 'Bamboo Dining Room', subtitle: 'Earthy wooden benches and table setups', category: 'indoor', image: '/assets/hotel_img_6.jpeg', height: 260, accent: '#00E5CC' },
-  { id: 10, title: 'Bamboo Hall Seating', subtitle: 'Handmade bamboo structure with glowing lights', category: 'indoor', image: '/assets/hotel_img_10.jpeg', height: 340, accent: '#E8B84B' },
-  { id: 28, title: 'Bamboo Hall Table View', subtitle: 'Hand-woven roof and lanterns in the dining hall', category: 'indoor', image: '/assets/hotel_img_28.jpeg', height: 350, accent: '#9B59B6' },
-  { id: 3, title: 'Rustic Gazebo Table', subtitle: 'Thatched roof outdoor dining seating', category: 'outdoor', image: '/assets/hotel_img_3.jpeg', height: 320, accent: '#00E5CC' },
-  { id: 9, title: 'Evening Gazebo Seating', subtitle: 'Palm trees and lights surrounding the gazebo', category: 'outdoor', image: '/assets/hotel_img_9.jpeg', height: 210, accent: '#00E5CC' },
-  { id: 24, title: 'Main Facade at Night', subtitle: 'Bamboo structure glowing under the stars', category: 'night', image: '/assets/hotel_img_24.jpeg', height: 270, accent: '#9B59B6' },
-  { id: 30, title: 'Hotel Signboard Entrance', subtitle: 'Umbrellas and hanging lights at the entrance', category: 'night', image: '/assets/hotel_img_30.jpeg', height: 330, accent: '#E8B84B' },
+  { id: 15, title: 'Traditional Bengali Thali', subtitle: 'Steaming rice, curries, and sweets served in brass platters', category: 'indoor', image: '/assets/hotel_img_15.jpeg', height: 320, accent: '#E8B84B' },
+  { id: 26, title: 'Bengali Thali Platter', subtitle: 'Authentic brass thali layout with fresh marigolds', category: 'indoor', image: '/assets/hotel_img_26.jpeg', height: 340, accent: '#00E5CC' },
+  { id: 29, title: 'Traditional Thali Feast', subtitle: 'Multiple thalis laid out for a grand group feast', category: 'indoor', image: '/assets/hotel_img_29.jpeg', height: 260, accent: '#9B59B6' },
+  { id: 6, title: 'Bamboo Dining Room', subtitle: 'Earthy wooden benches and hand-crafted table setups', category: 'indoor', image: '/assets/hotel_img_6.jpeg', height: 260, accent: '#00E5CC' },
+  { id: 10, title: 'Bamboo Hall Seating', subtitle: 'Handmade bamboo structure illuminated with glowing lights', category: 'indoor', image: '/assets/hotel_img_10.jpeg', height: 340, accent: '#E8B84B' },
+  { id: 11, title: 'Bamboo Ceiling Detail', subtitle: 'Cozy traditional bamboo weave pattern roofing', category: 'indoor', image: '/assets/hotel_img_11.jpeg', height: 220, accent: '#00E5CC' },
+  { id: 12, title: 'Warm Dining Ambience', subtitle: 'Earthy wooden seating decorated for special events', category: 'indoor', image: '/assets/hotel_img_12.jpeg', height: 340, accent: '#E8B84B' },
+  { id: 28, title: 'Bamboo Hall Table View', subtitle: 'Hand-woven roof and glowing lanterns in the main hall', category: 'indoor', image: '/assets/hotel_img_28.jpeg', height: 350, accent: '#9B59B6' },
+  { id: 3, title: 'Rustic Gazebo Table', subtitle: 'Thatched roof outdoor gazebo dining table setup', category: 'outdoor', image: '/assets/hotel_img_3.jpeg', height: 320, accent: '#00E5CC' },
+  { id: 8, title: 'Outdoor Seating View', subtitle: 'Scenic tables set in our lush landscaped gardens', category: 'outdoor', image: '/assets/hotel_img_8.jpeg', height: 200, accent: '#E8B84B' },
+  { id: 9, title: 'Evening Gazebo Seating', subtitle: 'Palm trees and warm lights surrounding the gazebo', category: 'outdoor', image: '/assets/hotel_img_9.jpeg', height: 210, accent: '#00E5CC' },
+  { id: 16, title: 'Garden Gazebo Dining', subtitle: 'Secluded outdoor dining spot within the valley gardens', category: 'outdoor', image: '/assets/hotel_img_16.jpeg', height: 230, accent: '#9B59B6' },
+  { id: 19, title: 'Open Air Seating', subtitle: 'Earthy wooden tables in the garden with warm spotlights', category: 'outdoor', image: '/assets/hotel_img_19.jpeg', height: 215, accent: '#E8B84B' },
+  { id: 36, title: 'Gazebo Lawn Dining', subtitle: 'A private thatched dining spot surrounded by palms', category: 'outdoor', image: '/assets/hotel_img_36.jpeg', height: 250, accent: '#00E5CC' },
+  { id: 4, title: 'Lawn Entrance Pathway', subtitle: 'Red carpet event entrance decorated under the stars', category: 'night', image: '/assets/hotel_img_4.jpeg', height: 280, accent: '#9B59B6' },
+  { id: 5, title: 'Anniversary Stage Backdrop', subtitle: 'Elegant anniversary celebration setup in the garden', category: 'night', image: '/assets/hotel_img_5.jpeg', height: 240, accent: '#E8B84B' },
+  { id: 7, title: 'Lawn Event Celebration', subtitle: 'Anniversary party setup decorated at night', category: 'night', image: '/assets/hotel_img_7.jpeg', height: 250, accent: '#00E5CC' },
+  { id: 24, title: 'Main Facade at Night', subtitle: 'Bamboo structure glowing warmly under the night sky', category: 'night', image: '/assets/hotel_img_24.jpeg', height: 270, accent: '#9B59B6' },
+  { id: 30, title: 'Hotel Signboard Entrance', subtitle: 'Hanging decorative umbrellas and lights at the entrance', category: 'night', image: '/assets/hotel_img_30.jpeg', height: 330, accent: '#E8B84B' },
+  { id: 31, title: 'Hanging Lights Entrance', subtitle: 'Vibrant glow of colorful umbrellas and fairy lights', category: 'night', image: '/assets/hotel_img_31.jpeg', height: 340, accent: '#00E5CC' },
 ];
 
 const filters = [

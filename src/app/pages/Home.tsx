@@ -164,10 +164,10 @@ const dishes = [
 ];
 
 const galleryPreview = [
-  { title: 'The Bamboo Hall', sub: 'Indoor', grad: 'linear-gradient(150deg,#3D1E00,#7A4500)', h: '200px', img: '/assets/hotel_exterior.png' },
+  { title: 'The Bamboo Hall', sub: 'Indoor Dining', grad: 'linear-gradient(150deg,#3D1E00,#7A4500)', h: '200px', img: '/assets/hotel_img_10.jpeg' },
   { title: 'Fairy Lit Gazebo', sub: 'Outdoor Night', grad: 'linear-gradient(150deg,#1A003A,#5A00B0)', h: '240px', img: '/assets/gazebo_night.png' },
-  { title: 'Folk Art Walls', sub: 'Indoor', grad: 'linear-gradient(150deg,#002818,#007050)', h: '180px' },
-  { title: 'Starlit Terrace', sub: 'Night', grad: 'linear-gradient(150deg,#06080F,#181C3A)', h: '220px' },
+  { title: 'Bengali Thali Platter', sub: 'Traditional Cuisine', grad: 'linear-gradient(150deg,#002818,#007050)', h: '180px', img: '/assets/hotel_img_26.jpeg' },
+  { title: 'Vibrant Event Lawn', sub: 'Outdoor Night Events', grad: 'linear-gradient(150deg,#06080F,#181C3A)', h: '220px', img: '/assets/hotel_img_4.jpeg' },
 ];
 
 /* ─── Stagger variants ─────────────────────────────────────── */
