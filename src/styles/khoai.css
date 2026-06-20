@@ -203,18 +203,22 @@ html { scroll-behavior: smooth; }
   );
 }
 
-/* Mobile: show full image without cropping */
+/* Mobile: cover with reduced height = less crop on landscape image */
 @media (max-width: 768px) {
+  .khoai-hero-section {
+    /* 56vw matches image aspect ratio (663/1191 ≈ 0.556), +160px for content padding */
+    min-height: calc(56vw + 160px);
+  }
   .khoai-hero-img {
-    object-fit: contain;        /* Full image visible — no crop */
-    object-position: center center;
+    object-fit: cover;           /* Cropped, but much less than full-screen height */
+    object-position: center 55%; /* Focus on hotel entrance / sign area */
   }
   .khoai-hero-overlay {
     background: linear-gradient(
       180deg,
-      rgba(13,10,7,0.45) 0%,
-      rgba(13,10,7,0.20) 40%,
-      rgba(13,10,7,0.88) 100%
+      rgba(13,10,7,0.40) 0%,
+      rgba(13,10,7,0.25) 45%,
+      rgba(13,10,7,0.85) 100%
     );
   }
 }
