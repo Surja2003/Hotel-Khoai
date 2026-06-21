@@ -109,7 +109,7 @@ const menuData: Record<string, MenuItem[]> = {
     { name: 'Chicken Butter Masala (3pcs)', price: '₹280' },
     { name: 'Lemon Chicken (6pcs)', price: '₹220' },
     { name: 'Chicken Bharta', price: '₹250' },
-    { name: 'Hotel খোয়াঁই Special Chicken (4pcs)', price: '₹330', special: true },
+    { name: 'Hotel খোয়াই Special Chicken (4pcs)', price: '₹330', special: true },
     { name: 'Handi Chicken (5pcs)', price: '₹420' },
     { name: 'Chicken Tarka', price: '₹140' },
     { name: 'Egg Tarka', price: '₹110' },
@@ -124,7 +124,7 @@ const menuData: Record<string, MenuItem[]> = {
     { name: 'Mutton Curry (3pcs)', price: '₹300' },
     { name: 'Mutton Masala (3pcs)', price: '₹310' },
     { name: 'Mutton Kosha (3pcs)', price: '₹320' },
-    { name: 'Hotel খোয়াঁই Special Mutton (4pcs)', price: '₹440', special: true },
+    { name: 'Hotel খোয়াই Special Mutton (4pcs)', price: '₹440', special: true },
     { name: 'Handi Mutton (5pcs)', price: '₹540' },
     { name: 'Handi Mutton (10pcs)', price: '₹960' },
     { name: 'Sweet Garlic Chicken (6pcs)', price: '₹220' },
@@ -314,7 +314,7 @@ export default function Menu() {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   useEffect(() => {
-    document.title = 'Menu | Hotel খোয়াঁই — Bengali, Tandoori & Chinese Cuisine | Orgram Bardhaman';
+    document.title = 'Menu | Hotel খোয়াই — Bengali, Tandoori & Chinese Cuisine | Orgram Bardhaman';
   }, []);
 
   const activeColor = tabs.find(t => t.key === activeTab)?.color ?? '#E8B84B';

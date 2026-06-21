@@ -74,7 +74,7 @@ export function Preloader({ progress }: PreloaderProps) {
       >
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
           <span style={{ fontFamily: '"Playfair Display", serif', color: '#E8B84B', fontSize: '20px', fontWeight: 600 }}>Hotel</span>
-          <span style={{ fontFamily: '"Tiro Bangla", serif', color: '#00E5CC', fontSize: '20px' }}>খোয়াঁই</span>
+          <span style={{ fontFamily: '"Tiro Bangla", serif', color: '#00E5CC', fontSize: '20px' }}>খোয়াই</span>
         </div>
       </motion.div>
 

@@ -7,11 +7,11 @@ const stagger = { hidden: {}, show: { transition: { staggerChildren: 0.1 } } };
 const fadeUp = { hidden: { opacity: 0, y: 28 }, show: { opacity: 1, y: 0, transition: { duration: 0.65, ease: [0.4, 0, 0.2, 1] } } };
 
 const milestones = [
-  { year: '2022', title: 'The Beginning', icon: '🌱', desc: 'Hotel খোয়াঁই opens at Orgram Jora Canal Bridge, Shantiniketan Bolpur Road, Bardhaman — serving home-style Bengali food to families and travellers.' },
+  { year: '2022', title: 'The Beginning', icon: '🌱', desc: 'Hotel খোয়াই opens at Orgram Jora Canal Bridge, Shantiniketan Bolpur Road, Bardhaman — serving home-style Bengali food to families and travellers.' },
   { year: '2022', title: 'The Bamboo Hall', icon: '🪵', desc: 'The iconic bamboo-framed dining hall is built — an architectural tribute to Bengal\'s heritage, with hand-woven ceilings and warm lantern light.' },
   { year: '2023', title: 'Folk Art Revival', icon: '🎨', desc: 'Local artisans paint the walls with Bengali folk art, transforming the restaurant into a living gallery of cultural expression.' },
   { year: '2023', title: 'The Fairy Gazebo', icon: '✨', desc: 'The beloved outdoor gazebo with fairy lights is unveiled — instantly becoming the most photographed spot in Orgram, Bardhaman.' },
-  { year: '2024', title: 'Google Certified', icon: '⭐', desc: 'Hotel খোয়াঁই achieves 4.5 stars on Google with 15,000+ monthly guests — recognised as Bardhaman\'s premier dining destination.' },
+  { year: '2024', title: 'Google Certified', icon: '⭐', desc: 'Hotel খোয়াই achieves 4.5 stars on Google with 15,000+ monthly guests — recognised as Bardhaman\'s premier dining destination.' },
 ];
 
 const values = [
@@ -49,7 +49,7 @@ function StoryVisuals() {
       }}>
         <img 
           src="/assets/hotel_exterior.png" 
-          alt="Hotel খোয়াঁই Exterior" 
+          alt="Hotel খোয়াই Exterior" 
           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
         />
         <div style={{
@@ -129,21 +129,21 @@ function StoryVisuals() {
 
 export default function OurStory() {
   useEffect(() => {
-    document.title = 'Our Story | Hotel খোয়াঁই — Orgram, Bardhaman | হোটেল খোয়াঁই';
+    document.title = 'Our Story | Hotel খোয়াই — Orgram, Bardhaman | হোটেল খোয়াই';
   }, []);
   return (
     <div style={{ backgroundColor: '#0D0A07' }}>
       {/* Page hero */}
       <section style={{ padding: 'clamp(100px,14vw,160px) 24px clamp(40px,6vw,80px)', background: 'radial-gradient(ellipse at 50% 100%, #1A0D00 0%, #0D0A07 55%)', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', pointerEvents: 'none', overflow: 'hidden' }}>
-          <div style={{ fontFamily: '"Tiro Bangla", serif', fontSize: 'clamp(120px,30vw,280px)', color: '#E8B84B', opacity: 0.025, lineHeight: 1 }}>খোয়াঁই</div>
+          <div style={{ fontFamily: '"Tiro Bangla", serif', fontSize: 'clamp(120px,30vw,280px)', color: '#E8B84B', opacity: 0.025, lineHeight: 1 }}>খোয়াই</div>
         </div>
         <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9 }}>
           <div style={{ color: '#E8B84B', fontSize: '11px', letterSpacing: '4px', marginBottom: '16px', textTransform: 'uppercase' }}>Our Heritage</div>
           <h1 style={{ fontFamily: '"Playfair Display", serif', fontSize: 'clamp(32px,7vw,72px)', color: '#F5ECD7', lineHeight: 1.15, marginBottom: '14px' }}>Our Story</h1>
           <div style={{ fontFamily: '"Tiro Bangla", serif', color: '#00E5CC', fontSize: 'clamp(18px,3vw,28px)', marginBottom: '20px', textShadow: '0 0 30px rgba(0,229,204,0.35)' }}>আমাদের গল্প</div>
           <p style={{ color: '#9C8A6E', maxWidth: '520px', margin: '0 auto', lineHeight: 1.9, fontSize: 'clamp(13px,2vw,15px)' }}>
-            From a humble roadside eatery to a destination — the story of Hotel খোয়াঁই is one of roots, resilience, and flavour.
+            From a humble roadside eatery to a destination — the story of Hotel খোয়াই is one of roots, resilience, and flavour.
           </p>
         </motion.div>
       </section>
@@ -161,9 +161,9 @@ export default function OurStory() {
             </div>
 
             {[
-              'Hotel খোয়াঁই was established in 2022 near the Orgram Jora Canal Bridge in Bardhaman, West Bengal. Born from a single unwavering belief: that authentic Bengali food, cooked with honesty and served with warmth, can turn any meal into a memorable celebration. What began just 3+ years ago with a simple goal has blossomed into one of the region\'s most beloved culinary landmarks, nestled along the Shantiniketan Bolpur Road.',
-              'The name \'খোয়াঁই\' (Khoai) is inspired by the red soil (লাল মাটি) and the uniquely beautiful, weather-worn canyons of Bolpur, immortalised in Rabindranath Tagore\'s poetry. In our kitchen, every dish is prepared with meticulous care—carefully balancing spices to bring out the scent of the soil (মাটির গন্ধ) and the true spirit of বাঙালিয়ানা (Bengaliness). From our slow-cooked Handi Mutton (হাঁড়ি মাংস) to the rich flavours of Sorshe Ilish (সর্ষে ইলিশ), each recipe is a piece of culinary heritage.',
-              'Our walls are adorned with traditional আলপনা (Alpona) and folk paintings created by local artisans, making your visit a visual feast as well. Whether you sit inside our rustic Bamboo Hall (বাঁশের কেল্লা) or dine under the stars in our fairy-lit Gazebo, you will experience the genuine warmth of বাঙালি আতিথেয়তা (Bengali hospitality). At Hotel খোয়াঁই, you are always part of our family.'
+              'Hotel খোয়াই was established in 2022 near the Orgram Jora Canal Bridge in Bardhaman, West Bengal. Born from a single unwavering belief: that authentic Bengali food, cooked with honesty and served with warmth, can turn any meal into a memorable celebration. What began just 3+ years ago with a simple goal has blossomed into one of the region\'s most beloved culinary landmarks, nestled along the Shantiniketan Bolpur Road.',
+              'The name \'খোয়াই\' (Khoai) is inspired by the red soil (লাল মাটি) and the uniquely beautiful, weather-worn canyons of Bolpur, immortalised in Rabindranath Tagore\'s poetry. In our kitchen, every dish is prepared with meticulous care—carefully balancing spices to bring out the scent of the soil (মাটির গন্ধ) and the true spirit of বাঙালিয়ানা (Bengaliness). From our slow-cooked Handi Mutton (হাঁড়ি মাংস) to the rich flavours of Sorshe Ilish (সর্ষে ইলিশ), each recipe is a piece of culinary heritage.',
+              'Our walls are adorned with traditional আলপনা (Alpona) and folk paintings created by local artisans, making your visit a visual feast as well. Whether you sit inside our rustic Bamboo Hall (বাঁশের কেল্লা) or dine under the stars in our fairy-lit Gazebo, you will experience the genuine warmth of বাঙালি আতিথেয়তা (Bengali hospitality). At Hotel খোয়াই, you are always part of our family.'
             ].map((para, i) => (
               <motion.p key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: i * 0.12 }} viewport={{ once: true }}
                 style={{ color: '#9C8A6E', lineHeight: 1.95, fontSize: 'clamp(13px,2vw,15px)', marginBottom: '22px' }}
