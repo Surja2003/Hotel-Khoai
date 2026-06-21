@@ -158,9 +158,9 @@ function GazeboVisual() {
 
 /* ─── Data ────────────────────────────────────────────────── */
 const dishes = [
-  { name: 'Khoai Special Chicken', bengali: 'খোয়াই স্পেশাল চিকেন', price: '₹300', desc: '4-piece slow-cooked in a secret masala blend, simmered for hours to draw out deep, smoky layers.', grad: 'linear-gradient(140deg,#2D1000,#6B2800,#1A0800)', tag: 'Non-Veg Main' },
-  { name: 'Sorshe Ilish', bengali: 'সর্ষে ইলিশ', price: '₹280', desc: 'The soul of Bengal. Hilsa steeped in golden mustard, wrapped in tradition and served warm.', grad: 'linear-gradient(140deg,#001528,#003D5A,#001020)', tag: 'Fish & Seafood' },
-  { name: 'Handi Mutton', bengali: 'হান্ডি মাটন', price: '₹500', desc: '5-piece tender mutton, sealed and slow-simmered in a clay handi for rich, layered depth.', grad: 'linear-gradient(140deg,#180A00,#5A2000,#100500)', tag: 'Non-Veg Main' },
+  { name: 'Khoai Special Chicken', bengali: 'খোয়াই স্পেশাল চিকেন', price: '₹330', desc: '4-piece slow-cooked in a secret masala blend, simmered for hours to draw out deep, smoky layers.', grad: 'linear-gradient(140deg,#2D1000,#6B2800,#1A0800)', tag: 'Non-Veg Main' },
+  { name: 'Sorshe Ilish', bengali: 'সর্ষে ইলিশ', price: '₹340', desc: 'The soul of Bengal. Hilsa steeped in golden mustard, wrapped in tradition and served warm.', grad: 'linear-gradient(140deg,#001528,#003D5A,#001020)', tag: 'Fish & Seafood' },
+  { name: 'Handi Mutton', bengali: 'হান্ডি মাটন', price: '₹540', desc: '5-piece tender mutton, sealed and slow-simmered in a clay handi for rich, layered depth.', grad: 'linear-gradient(140deg,#180A00,#5A2000,#100500)', tag: 'Non-Veg Main' },
 ];
 
 const galleryPreview = [
@@ -315,7 +315,7 @@ export default function Home() {
           viewport={{ once: true }}
           style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 24px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(150px,1fr))', borderBottom: '1px solid rgba(232,184,75,0.08)' }}
         >
-          {[{ v: 500, l: 'Monthly Guests', s: '+' }, { v: 40, l: 'Dishes on Menu', s: '+' }, { v: 8, l: 'Years of Heritage', s: '+' }].map(s => (
+          {[{ v: 15000, l: 'Monthly Guests', s: '+' }, { v: 40, l: 'Dishes on Menu', s: '+' }, { v: 3, l: 'Years of Heritage', s: '+' }].map(s => (
             <motion.div key={s.l} variants={fadeUp}>
               <StatItem value={s.v} label={s.l} suffix={s.s} />
             </motion.div>
