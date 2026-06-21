@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { motion } from 'motion/react';
 import { MapPin, Clock, Phone, Navigation, Star, ExternalLink } from 'lucide-react';
+import FloatingContact from '../components/FloatingContact';
 
 const stagger = { hidden: {}, show: { transition: { staggerChildren: 0.1 } } };
 const fadeUp = { hidden: { opacity: 0, y: 24 }, show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.4, 0, 0.2, 1] } } };
@@ -47,8 +48,8 @@ const contactItems = [
     label: 'Contact',
     content: (
       <div style={{ color: '#9C8A6E', fontSize: '14px', lineHeight: 1.8 }}>
-        Reservations & large group bookings<br />
-        <span style={{ color: '#E8B84B', fontSize: '16px', fontFamily: '"Playfair Display", serif' }}>+91 XXXXX XXXXX</span>
+        Reservations &amp; large group bookings<br />
+        <a href="tel:+919732269939" style={{ color: '#E8B84B', fontSize: '16px', fontFamily: '"Playfair Display", serif', textDecoration: 'none' }}>+91 97322 69939</a>
       </div>
     ),
   },
@@ -104,6 +105,7 @@ export default function FindUs() {
     document.title = 'Find Us | Hotel খোয়াই — Orgram, Bardhaman, West Bengal';
   }, []);
   return (
+    <>
     <div style={{ backgroundColor: '#0D0A07' }}>
       {/* Page hero */}
       <section style={{ padding: 'clamp(100px,14vw,160px) 24px clamp(40px,6vw,70px)', background: 'radial-gradient(ellipse at 70% 100%, #001A2D 0%, #0D0A07 55%)', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
@@ -205,5 +207,7 @@ export default function FindUs() {
         </motion.div>
       </section>
     </div>
+    <FloatingContact />
+    </>
   );
 }

@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import { motion, AnimatePresence } from 'motion/react';
 import { MapPin, ChevronDown, Star, ArrowRight } from 'lucide-react';
 import { Preloader } from '../components/Preloader';
+import FloatingContact from '../components/FloatingContact';
 
 /* ─── Particle Canvas ─────────────────────────────────────── */
 function ParticleCanvas() {
@@ -204,6 +205,7 @@ export default function Home() {
   }, [showPreloader, finishPreloader]);
 
   return (
+    <>
     <div>
       <AnimatePresence>
         {showPreloader && <Preloader progress={progress} />}
@@ -449,7 +451,7 @@ export default function Home() {
           <div style={{ fontFamily: '"Tiro Bangla", serif', color: '#00E5CC', fontSize: 'clamp(22px,4vw,32px)', marginBottom: '16px', textShadow: '0 0 30px rgba(0,229,204,0.3)' }}>আপনার আসন সংরক্ষণ করুন</div>
           <h3 style={{ fontFamily: '"Playfair Display", serif', color: '#F5ECD7', fontSize: 'clamp(18px,3vw,26px)', marginBottom: '14px' }}>Come Dine With Us</h3>
           <p style={{ color: '#9C8A6E', marginBottom: '36px', fontSize: 'clamp(13px,2vw,15px)', lineHeight: 1.9 }}>
-            Open daily 11 AM – 11 PM on NH-60, Khoai Valley. Walk-ins welcome — for groups of 10+, we recommend calling ahead.
+            Open daily 11 AM – 11 PM at Orgram, Bardhaman. Walk-ins welcome — for groups of 10+, we recommend calling ahead.
           </p>
           <Link to="/find-us" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', padding: '15px 36px', border: '1px solid rgba(232,184,75,0.5)', color: '#E8B84B', borderRadius: '3px', textDecoration: 'none', fontSize: '12px', letterSpacing: '2px', textTransform: 'uppercase', minHeight: '52px' }}>
             <MapPin size={14} /> Find Us & Reserve
@@ -457,5 +459,7 @@ export default function Home() {
         </motion.div>
       </section>
     </div>
+    <FloatingContact />
+    </>
   );
 }
