@@ -231,7 +231,7 @@ export default function Home() {
             style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '32px', padding: '8px 20px', border: '1px solid rgba(232,184,75,0.22)', borderRadius: '100px', color: '#9C8A6E', fontSize: '12px', letterSpacing: '1.5px', backdropFilter: 'blur(8px)', background: 'rgba(13,10,7,0.4)' }}
           >
             <MapPin size={11} color="#E8B84B" />
-            EST. IN KHOAI VALLEY · NH-60
+            EST. 2022 · ORGRAM, BARDHAMAN
           </motion.div>
 
           {/* combined bilingual heading on the same line */}
@@ -346,7 +346,7 @@ export default function Home() {
             {/* Decorative line */}
             <div style={{ width: '48px', height: '1px', background: 'linear-gradient(90deg,#E8B84B,transparent)', marginBottom: '24px' }} />
             <p style={{ color: '#9C8A6E', lineHeight: 1.9, fontSize: 'clamp(14px,2vw,15px)', marginBottom: '36px' }}>
-              Perched on the curves of NH-60 in the verdant Khoai Valley, Hotel খোয়াই was born from an unwavering passion for authentic Bengali cuisine and a deep love for the region's folk art heritage. Every bamboo pillar, every hand-painted mural tells a story.
+              Located along the Shantiniketan Bolpur Road at Orgram Jora Canal Bridge, Bardhaman, Hotel খোয়াই was established in 2022 from an unwavering passion for authentic Bengali cuisine and a deep love for the region's cultural heritage. Every bamboo pillar, every hand-painted mural tells a story.
             </p>
             <Link to="/our-story" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', color: '#E8B84B', textDecoration: 'none', fontSize: '13px', letterSpacing: '1.5px', textTransform: 'uppercase', borderBottom: '1px solid rgba(232,184,75,0.4)', paddingBottom: '4px' }}>
               Read Our Story <ArrowRight size={13} />
