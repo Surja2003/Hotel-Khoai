@@ -7,10 +7,8 @@ const stagger = { hidden: {}, show: { transition: { staggerChildren: 0.1 } } };
 const fadeUp = { hidden: { opacity: 0, y: 24 }, show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.4, 0, 0.2, 1] } } };
 
 const hours = [
-  { day: 'Monday – Friday', time: '11:00 AM – 11:00 PM', today: true },
-  { day: 'Saturday', time: '10:00 AM – 11:30 PM', today: false },
-  { day: 'Sunday', time: '10:00 AM – 11:30 PM', today: false },
-  { day: 'Public Holidays', time: '10:00 AM – 11:30 PM', today: false },
+  { day: 'Monday – Sunday', time: '08:00 AM – 12:05 AM', today: true },
+  { day: 'Public Holidays', time: '08:00 AM – 12:05 AM', today: false },
 ];
 
 const contactItems = [
