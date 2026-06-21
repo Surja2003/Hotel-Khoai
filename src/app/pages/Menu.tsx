@@ -417,9 +417,9 @@ export default function Menu() {
 
       {/* ── DIGITAL VIEW ── */}
       {viewMode === 'digital' && (
-        <>
+        <div ref={menuSectionRef}>
           {/* Tab navigation — horizontal scroll on mobile */}
-          <div ref={menuSectionRef} style={{ position: 'sticky', top: '56px', zIndex: 100, backgroundColor: '#0D0A07', borderBottom: '1px solid rgba(232,184,75,0.08)', backdropFilter: 'blur(12px)' }}>
+          <div style={{ position: 'sticky', top: '56px', zIndex: 100, backgroundColor: '#0D0A07', borderBottom: '1px solid rgba(232,184,75,0.08)', backdropFilter: 'blur(12px)' }}>
             <div className="khoai-tab-scroll" style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 20px', display: 'flex', gap: '4px' }}>
               {tabs.map(tab => (
                 <button
@@ -490,7 +490,7 @@ export default function Menu() {
               </AnimatePresence>
             </div>
           </section>
-        </>
+        </div>
       )}
 
       {/* ── CARDS VIEW ── */}
