@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ZoomIn, X, ChevronLeft, ChevronRight, BookOpen, List } from 'lucide-react';
 
@@ -317,6 +317,19 @@ export default function Menu() {
     document.title = 'Menu | Hotel খোয়াই — Bengali, Tandoori & Chinese Cuisine | Orgram Bardhaman';
   }, []);
 
+  const menuSectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (menuSectionRef.current) {
+      const rect = menuSectionRef.current.getBoundingClientRect();
+      const stickyOffset = 56; // navbar height
+      if (rect.top < stickyOffset) {
+        const y = rect.top + window.scrollY - stickyOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    }
+  }, [activeTab]);
+
   const activeColor = tabs.find(t => t.key === activeTab)?.color ?? '#E8B84B';
 
   const openLightbox = (index: number) => {
@@ -406,7 +419,7 @@ export default function Menu() {
       {viewMode === 'digital' && (
         <>
           {/* Tab navigation — horizontal scroll on mobile */}
-          <div style={{ position: 'sticky', top: '56px', zIndex: 100, backgroundColor: '#0D0A07', borderBottom: '1px solid rgba(232,184,75,0.08)', backdropFilter: 'blur(12px)' }}>
+          <div ref={menuSectionRef} style={{ position: 'sticky', top: '56px', zIndex: 100, backgroundColor: '#0D0A07', borderBottom: '1px solid rgba(232,184,75,0.08)', backdropFilter: 'blur(12px)' }}>
             <div className="khoai-tab-scroll" style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 20px', display: 'flex', gap: '4px' }}>
               {tabs.map(tab => (
                 <button
