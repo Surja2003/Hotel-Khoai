@@ -1,21 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Hotel খোয়াই | Where Roots Meet Flavours</title>
-      <meta name="description" content="Hotel খোয়াই is a premier dining destination in the Khoai Valley, Tripura. Experience authentic Bengali cuisine, our bamboo dining hall, and our fairy-lit outdoor gazebo." />
-      <style>html, body { height: 100%; margin: 0; } #root { height: 100%; }</style>
-      
-    </head>
+    <!-- ═══════════════════════════════════════════════
+         PRIMARY SEO — Title & Description
+    ════════════════════════════════════════════════ -->
+    <title>Hotel খোয়াই | Best Restaurant in Orgram, Bardhaman | হোটেল খোয়াই</title>
+    <meta name="description" content="Hotel খোয়াই (Hotel Khoai) — Orgram, Bardhaman-এর সেরা রেস্তোরাঁ। Authentic Bengali, Tandoori & Chinese cuisine near Shantiniketan Bolpur Road, Jora Canal Bridge, West Bengal 713128. Dine in our Bamboo Hall or Fairy-Lit Gazebo. Open daily 11 AM – 11 PM." />
 
-    <body>
-      
-      <div id="root"></div>
-      <script type="module" src="/src/main.tsx"></script>
-      
-    </body>
-  </html>
-  
+    <!-- ═══════════════════════════════════════════════
+         KEYWORDS (Bengali + English)
+    ════════════════════════════════════════════════ -->
+    <meta name="keywords" content="
+      Hotel Khoai, Hotel খোয়াই, হোটেল খোয়াই, Khoai restaurant,
+      restaurant Orgram, restaurant Bardhaman, restaurant near Shantiniketan,
+      Bengali restaurant Bolpur Road, restaurant Jora Canal Bridge,
+      best restaurant West Bengal 713128, hotel near Shantiniketan Bolpur Road,
+      Orgram restaurant, Bardhaman dining, Bengali food Bardhaman,
+      restaurant near Bolpur, hotel Orgram West Bengal,
+      Hotel Khoai Orgram, Hotel Khoai Bardhaman, খোয়াই রেস্তোরাঁ,
+      বাংলাদেশী রেস্তোরাঁ বর্ধমান, অর্গ্রাম রেস্তোরাঁ,
+      Bengali thali Bardhaman, handi mutton, sorshe ilish, Khoai special chicken,
+      outdoor gazebo dining, bamboo restaurant West Bengal
+    " />
+
+    <!-- ═══════════════════════════════════════════════
+         CANONICAL & LANGUAGE
+    ════════════════════════════════════════════════ -->
+    <link rel="canonical" href="https://hotel-khoai.vercel.app/" />
+    <link rel="alternate" hreflang="en" href="https://hotel-khoai.vercel.app/" />
+    <link rel="alternate" hreflang="bn" href="https://hotel-khoai.vercel.app/" />
+    <link rel="alternate" hreflang="x-default" href="https://hotel-khoai.vercel.app/" />
+
+    <!-- ═══════════════════════════════════════════════
+         GEO / LOCATION META TAGS
+    ════════════════════════════════════════════════ -->
+    <meta name="geo.region"       content="IN-WB" />
+    <meta name="geo.placename"    content="Orgram, Bardhaman, West Bengal, India" />
+    <meta name="geo.position"     content="23.6854;87.8622" />
+    <meta name="ICBM"             content="23.6854, 87.8622" />
+    <meta name="DC.title"         content="Hotel খোয়াই" />
+
+    <!-- ═══════════════════════════════════════════════
+         OPEN GRAPH (Facebook, WhatsApp, LinkedIn)
+    ════════════════════════════════════════════════ -->
+    <meta property="og:type"          content="restaurant" />
+    <meta property="og:site_name"     content="Hotel খোয়াই" />
+    <meta property="og:title"         content="Hotel খোয়াই | Best Restaurant in Orgram, Bardhaman" />
+    <meta property="og:description"   content="Authentic Bengali, Tandoori & Chinese cuisine at Orgram, Bardhaman near Shantiniketan Bolpur Road. Bamboo Hall · Fairy-Lit Gazebo · 15,000+ Monthly Guests. Open daily." />
+    <meta property="og:url"           content="https://hotel-khoai.vercel.app/" />
+    <meta property="og:image"         content="https://hotel-khoai.vercel.app/assets/hotel_exterior.png" />
+    <meta property="og:image:width"   content="1191" />
+    <meta property="og:image:height"  content="663" />
+    <meta property="og:image:alt"     content="Hotel খোয়াই exterior night view, Orgram Bardhaman" />
+    <meta property="og:locale"        content="en_IN" />
+    <meta property="og:locale:alternate" content="bn_BD" />
+    <meta property="business:contact_data:street_address" content="Orgram Jora Canal Bridge, Shantiniketan Bolpur Road" />
+    <meta property="business:contact_data:locality"       content="Orgram" />
+    <meta property="business:contact_data:region"         content="West Bengal" />
+    <meta property="business:contact_data:postal_code"    content="713128" />
+    <meta property="business:contact_data:country_name"   content="India" />
+
+    <!-- ═══════════════════════════════════════════════
+         TWITTER / X CARD
+    ════════════════════════════════════════════════ -->
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:title"       content="Hotel খোয়াই | Orgram, Bardhaman" />
+    <meta name="twitter:description" content="Authentic Bengali cuisine near Shantiniketan Bolpur Road, Orgram, Bardhaman. Bamboo Hall · Fairy Gazebo · Open daily." />
+    <meta name="twitter:image"       content="https://hotel-khoai.vercel.app/assets/hotel_exterior.png" />
+
+    <!-- ═══════════════════════════════════════════════
+         ROBOTS & INDEXING
+    ════════════════════════════════════════════════ -->
+    <meta name="robots"       content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="googlebot"    content="index, follow" />
+    <meta name="bingbot"      content="index, follow" />
+    <meta name="author"       content="Hotel খোয়াই" />
+    <meta name="copyright"    content="Hotel খোয়াই" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="language"     content="English, Bengali" />
+    <meta name="rating"       content="general" />
+
+    <!-- ═══════════════════════════════════════════════
+         MOBILE / PWA
+    ════════════════════════════════════════════════ -->
+    <meta name="theme-color"               content="#0D0A07" />
+    <meta name="apple-mobile-web-app-capable"          content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title"            content="Hotel খোয়াই" />
+    <meta name="application-name"                      content="Hotel খোয়াই" />
+    <meta name="msapplication-TileColor"               content="#0D0A07" />
+
+    <!-- ═══════════════════════════════════════════════
+         PRECONNECT (Performance)
+    ════════════════════════════════════════════════ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+
+    <!-- ═══════════════════════════════════════════════
+         JSON-LD STRUCTURED DATA
+         Restaurant + LocalBusiness + BreadcrumbList
+    ════════════════════════════════════════════════ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": ["Restaurant", "LocalBusiness", "FoodEstablishment"],
+          "@id": "https://hotel-khoai.vercel.app/#restaurant",
+          "name": "Hotel খোয়াই",
+          "alternateName": ["Hotel Khoai", "হোটেল খোয়াই", "Khoai Restaurant"],
+          "description": "Authentic Bengali, Tandoori and Chinese cuisine restaurant in Orgram, Bardhaman, West Bengal. Known for Handi Mutton, Sorshe Ilish, and Khoai Special Chicken. Features a Bamboo Dining Hall and Fairy-Lit Outdoor Gazebo.",
+          "url": "https://hotel-khoai.vercel.app",
+          "telephone": "",
+          "image": [
+            "https://hotel-khoai.vercel.app/assets/hotel_exterior.png",
+            "https://hotel-khoai.vercel.app/assets/gazebo_night.png"
+          ],
+          "logo": "https://hotel-khoai.vercel.app/assets/hotel_exterior.png",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Orgram Jora Canal Bridge, Shantiniketan Bolpur Road",
+            "addressLocality": "Orgram",
+            "addressRegion": "West Bengal",
+            "postalCode": "713128",
+            "addressCountry": "IN"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 23.6854,
+            "longitude": 87.8622
+          },
+          "hasMap": "https://maps.app.goo.gl/XtiCX5m3pnj35Ktv8",
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+              "opens": "11:00",
+              "closes": "23:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Saturday","Sunday"],
+              "opens": "10:00",
+              "closes": "23:30"
+            }
+          ],
+          "servesCuisine": ["Bengali", "Indian", "Chinese", "Tandoori", "North Indian"],
+          "priceRange": "₹₹",
+          "currenciesAccepted": "INR",
+          "paymentAccepted": "Cash, UPI",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.5",
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingCount": "150"
+          },
+          "menu": "https://hotel-khoai.vercel.app/menu",
+          "foundingDate": "2022",
+          "numberOfEmployees": {
+            "@type": "QuantitativeValue",
+            "value": 15
+          },
+          "amenityFeature": [
+            {"@type": "LocationFeatureSpecification", "name": "Bamboo Dining Hall", "value": true},
+            {"@type": "LocationFeatureSpecification", "name": "Outdoor Fairy-Lit Gazebo", "value": true},
+            {"@type": "LocationFeatureSpecification", "name": "Parking", "value": true},
+            {"@type": "LocationFeatureSpecification", "name": "Family Friendly", "value": true},
+            {"@type": "LocationFeatureSpecification", "name": "Event Space", "value": true}
+          ],
+          "keywords": "Hotel Khoai, Hotel খোয়াই, restaurant Orgram, Bengali restaurant Bardhaman, restaurant near Shantiniketan, Bolpur Road restaurant"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://hotel-khoai.vercel.app/#website",
+          "url": "https://hotel-khoai.vercel.app",
+          "name": "Hotel খোয়াই",
+          "description": "Official website of Hotel খোয়াই, Orgram, Bardhaman",
+          "inLanguage": ["en-IN", "bn-IN"],
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://hotel-khoai.vercel.app/menu?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home",      "item": "https://hotel-khoai.vercel.app/"},
+            {"@type": "ListItem", "position": 2, "name": "Our Story", "item": "https://hotel-khoai.vercel.app/our-story"},
+            {"@type": "ListItem", "position": 3, "name": "Menu",      "item": "https://hotel-khoai.vercel.app/menu"},
+            {"@type": "ListItem", "position": 4, "name": "Gallery",   "item": "https://hotel-khoai.vercel.app/gallery"},
+            {"@type": "ListItem", "position": 5, "name": "Find Us",   "item": "https://hotel-khoai.vercel.app/find-us"}
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <style>html, body { height: 100%; margin: 0; } #root { height: 100%; }</style>
+  </head>
+
+  <body>
+    <!-- Hidden SEO text for crawlers (not visible to users) -->
+    <noscript>
+      <div style="display:none">
+        Hotel খোয়াই (Hotel Khoai) — Orgram Jora Canal Bridge, Shantiniketan Bolpur Road, Bardhaman, Orgram, West Bengal 713128.
+        Best restaurant near Shantiniketan | Bengali restaurant Bardhaman | হোটেল খোয়াই অর্গ্রাম বর্ধমান।
+        Authentic Bengali, Tandoori &amp; Chinese cuisine. Open daily. 15,000+ monthly guests.
+      </div>
+    </noscript>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

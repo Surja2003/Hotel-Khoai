@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ZoomIn, X, ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -156,6 +156,10 @@ function GalleryCard({ item, onClick }: { item: GalleryItem; onClick: () => void
 export default function Gallery() {
   const [active, setActive] = useState('all');
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+
+  useEffect(() => {
+    document.title = 'Gallery | Hotel খোয়াই — Bamboo Hall, Gazebo & Events | Orgram Bardhaman';
+  }, []);
 
   const filtered = active === 'all' ? items : items.filter(i => i.category === active);
 

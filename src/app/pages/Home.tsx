@@ -182,6 +182,10 @@ export default function Home() {
   const [progress, setProgress] = useState(0);
   const [heroReady, setHeroReady] = useState(!showPreloader);
 
+  useEffect(() => {
+    document.title = 'Hotel খোয়াই | Best Restaurant in Orgram Bardhaman | হোটেল খোয়াই';
+  }, []);
+
   const finishPreloader = useCallback(() => {
     sessionStorage.setItem(SESSION_KEY, '1');
     setShowPreloader(false);

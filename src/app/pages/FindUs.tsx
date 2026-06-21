@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { motion } from 'motion/react';
 import { MapPin, Clock, Phone, Navigation, Star, ExternalLink } from 'lucide-react';
 
@@ -19,7 +20,10 @@ const contactItems = [
       <>
         <div style={{ color: '#F5ECD7', fontSize: 'clamp(14px,2vw,15px)', marginBottom: '6px', fontFamily: '"Playfair Display", serif' }}>Hotel খোয়াই</div>
         <div style={{ color: '#9C8A6E', fontSize: '14px', lineHeight: 1.75 }}>
-          National Highway 60, Khoai<br />Tripura, India
+          Orgram Jora Canal Bridge,<br />
+          Shantiniketan Bolpur Road,<br />
+          Orgram, Bardhaman,<br />
+          West Bengal — 713128
         </div>
       </>
     ),
@@ -78,45 +82,27 @@ function AnimatedMapPin() {
   );
 }
 
-function MapPlaceholder() {
+function MapEmbed() {
   return (
-    <div style={{ width: '100%', height: '100%', position: 'relative', overflow: 'hidden', background: 'linear-gradient(135deg,#080800,#101200,#081000,#060800)' }}>
-      {/* Grid */}
-      {Array.from({ length: 10 }, (_, i) => (
-        <div key={'h'+i} style={{ position: 'absolute', left: 0, right: 0, top: `${i * 11}%`, height: '1px', backgroundColor: 'rgba(232,184,75,0.04)' }} />
-      ))}
-      {Array.from({ length: 10 }, (_, i) => (
-        <div key={'v'+i} style={{ position: 'absolute', top: 0, bottom: 0, left: `${i * 11}%`, width: '1px', backgroundColor: 'rgba(232,184,75,0.04)' }} />
-      ))}
-
-      {/* NH-60 Road */}
-      <div style={{ position: 'absolute', top: '44%', left: '-5%', right: '-5%', height: '4px', background: 'linear-gradient(90deg,transparent,rgba(232,184,75,0.2),rgba(232,184,75,0.3),rgba(232,184,75,0.2),transparent)', transform: 'rotate(-3deg)' }}>
-        <div style={{ position: 'absolute', top: '-18px', left: '55%', color: '#E8B84B', fontSize: '10px', letterSpacing: '2px', whiteSpace: 'nowrap', opacity: 0.7 }}>NH - 60</div>
-      </div>
-
-      {/* Khoai River */}
-      <svg style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', opacity: 0.18 }} viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-        <path d="M30,220 Q110,200 170,225 Q240,255 310,215 Q360,195 410,210" stroke="#00E5CC" strokeWidth="5" fill="none" strokeLinecap="round" />
-        <text x="110" y="188" fill="#00E5CC" fontSize="9" fontFamily="sans-serif">Khoai River</text>
-      </svg>
-
-      {/* Green patches */}
-      {[{ x:'15%',y:'20%',w:'18%',h:'15%' },{ x:'62%',y:'60%',w:'22%',h:'18%' }].map((g,i) => (
-        <div key={i} style={{ position: 'absolute', left: g.x, top: g.y, width: g.w, height: g.h, backgroundColor: 'rgba(0,120,50,0.08)', borderRadius: '4px' }} />
-      ))}
-
-      <AnimatedMapPin />
-
-      {/* Label */}
-      <div style={{ position: 'absolute', bottom: '20px', left: '50%', transform: 'translateX(-50%)', backgroundColor: 'rgba(13,10,7,0.92)', border: '1px solid rgba(232,184,75,0.25)', borderRadius: '6px', padding: '10px 20px', textAlign: 'center', whiteSpace: 'nowrap', backdropFilter: 'blur(8px)' }}>
-        <div style={{ color: '#E8B84B', fontSize: '11px', letterSpacing: '1.5px', marginBottom: '3px', fontWeight: 600 }}>HOTEL খোয়াই</div>
-        <div style={{ color: '#9C8A6E', fontSize: '11px' }}>NH-60, Khoai Valley, Tripura</div>
-      </div>
+    <div style={{ width: '100%', height: '100%', position: 'relative', overflow: 'hidden', borderRadius: '12px' }}>
+      <iframe
+        title="Hotel খোয়াই Location — Orgram, Bardhaman"
+        src="https://maps.google.com/maps?q=23.6854,87.8622&z=15&output=embed"
+        width="100%"
+        height="100%"
+        style={{ border: 0, display: 'block' }}
+        allowFullScreen
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      />
     </div>
   );
 }
 
 export default function FindUs() {
+  useEffect(() => {
+    document.title = 'Find Us | Hotel খোয়াই — Orgram, Bardhaman, West Bengal';
+  }, []);
   return (
     <div style={{ backgroundColor: '#0D0A07' }}>
       {/* Page hero */}
@@ -129,7 +115,7 @@ export default function FindUs() {
           <h1 style={{ fontFamily: '"Playfair Display", serif', fontSize: 'clamp(32px,7vw,72px)', color: '#F5ECD7', lineHeight: 1.15, marginBottom: '14px' }}>Find Us</h1>
           <div style={{ fontFamily: '"Tiro Bangla", serif', color: '#00E5CC', fontSize: 'clamp(18px,3vw,28px)', marginBottom: '20px', textShadow: '0 0 30px rgba(0,229,204,0.35)' }}>আমাদের খুঁজুন</div>
           <p style={{ color: '#9C8A6E', maxWidth: '440px', margin: '0 auto', lineHeight: 1.9, fontSize: 'clamp(13px,2vw,15px)' }}>
-            Come find us on the scenic NH-60, Khoai Valley — open every day, lunch through late dinner.
+            Come find us at Orgram Jora Canal Bridge, Shantiniketan Bolpur Road, Bardhaman — open every day, lunch through late dinner.
           </p>
         </motion.div>
       </section>
@@ -162,7 +148,7 @@ export default function FindUs() {
             {/* CTA buttons */}
             <motion.div variants={fadeUp} style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginTop: '8px' }}>
               <a
-                href="https://maps.app.goo.gl/CEsCxcVBaUrYY4vNA"
+                href="https://maps.app.goo.gl/XtiCX5m3pnj35Ktv8"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="khoai-btn-shimmer"
@@ -182,7 +168,7 @@ export default function FindUs() {
           {/* Map */}
           <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.15 }} viewport={{ once: true }}>
             <div style={{ borderRadius: '12px', overflow: 'hidden', border: '1px solid rgba(232,184,75,0.12)', height: 'clamp(320px,50vw,500px)', position: 'relative' }}>
-              <MapPlaceholder />
+              <MapEmbed />
             </div>
 
             {/* Directions note */}
@@ -192,7 +178,7 @@ export default function FindUs() {
                 <span style={{ color: '#E8B84B', fontSize: '10px', letterSpacing: '2px', textTransform: 'uppercase' }}>Directions</span>
               </div>
               <p style={{ color: '#9C8A6E', fontSize: '13px', lineHeight: 1.8 }}>
-                Located on National Highway 60, Khoai, Tripura. Look for the bamboo-framed entrance and glowing signboard. Ample parking available on premises.
+               Located at Orgram Jora Canal Bridge, Shantiniketan Bolpur Road, Orgram, Bardhaman, West Bengal 713128. Look for the glowing signboard. Ample parking available.
               </p>
             </div>
           </motion.div>

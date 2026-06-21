@@ -313,6 +313,10 @@ export default function Menu() {
   const [activeTab, setActiveTab] = useState<keyof typeof menuData>('lunch');
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
+  useEffect(() => {
+    document.title = 'Menu | Hotel খোয়াই — Bengali, Tandoori & Chinese Cuisine | Orgram Bardhaman';
+  }, []);
+
   const activeColor = tabs.find(t => t.key === activeTab)?.color ?? '#E8B84B';
 
   const openLightbox = (index: number) => {

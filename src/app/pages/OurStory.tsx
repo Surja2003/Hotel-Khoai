@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Leaf, Award, Heart, Users, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router';
@@ -6,11 +7,11 @@ const stagger = { hidden: {}, show: { transition: { staggerChildren: 0.1 } } };
 const fadeUp = { hidden: { opacity: 0, y: 28 }, show: { opacity: 1, y: 0, transition: { duration: 0.65, ease: [0.4, 0, 0.2, 1] } } };
 
 const milestones = [
-  { year: '2016', title: 'The Beginning', icon: '🌱', desc: 'Hotel Khoai opens as a modest roadside eatery on NH-60, serving home-style Bengali food to travellers passing through the valley.' },
-  { year: '2018', title: 'The Bamboo Hall', icon: '🪵', desc: 'The iconic bamboo-framed dining hall is built — an architectural tribute to Khoai\'s forest heritage, with hand-woven ceilings and warm lantern light.' },
-  { year: '2020', title: 'Folk Art Revival', icon: '🎨', desc: 'Local Santali artisans paint the walls with tribal folk art, transforming the restaurant into a living gallery of cultural expression.' },
-  { year: '2022', title: 'The Fairy Gazebo', icon: '✨', desc: 'The beloved outdoor gazebo with hundreds of fairy lights is unveiled — instantly becoming the most photographed spot on the NH-60 corridor.' },
-  { year: '2024', title: 'Google Certified', icon: '⭐', desc: 'Hotel Khoai achieves 4.5 stars on Google with 500+ monthly guests — recognised as Khoai Valley\'s premier dining destination.' },
+  { year: '2022', title: 'The Beginning', icon: '🌱', desc: 'Hotel খোয়াই opens at Orgram Jora Canal Bridge, Shantiniketan Bolpur Road, Bardhaman — serving home-style Bengali food to families and travellers.' },
+  { year: '2022', title: 'The Bamboo Hall', icon: '🪵', desc: 'The iconic bamboo-framed dining hall is built — an architectural tribute to Bengal\'s heritage, with hand-woven ceilings and warm lantern light.' },
+  { year: '2023', title: 'Folk Art Revival', icon: '🎨', desc: 'Local artisans paint the walls with Bengali folk art, transforming the restaurant into a living gallery of cultural expression.' },
+  { year: '2023', title: 'The Fairy Gazebo', icon: '✨', desc: 'The beloved outdoor gazebo with fairy lights is unveiled — instantly becoming the most photographed spot in Orgram, Bardhaman.' },
+  { year: '2024', title: 'Google Certified', icon: '⭐', desc: 'Hotel খোয়াই achieves 4.5 stars on Google with 15,000+ monthly guests — recognised as Bardhaman\'s premier dining destination.' },
 ];
 
 const values = [
@@ -127,6 +128,9 @@ function StoryVisuals() {
 }
 
 export default function OurStory() {
+  useEffect(() => {
+    document.title = 'Our Story | Hotel খোয়াই — Orgram, Bardhaman | হোটেল খোয়াই';
+  }, []);
   return (
     <div style={{ backgroundColor: '#0D0A07' }}>
       {/* Page hero */}
