@@ -159,7 +159,7 @@ export default function FindUs() {
                 <Navigation size={15} /> Open in Google Maps <ExternalLink size={12} />
               </a>
               <a
-                href="tel:+91XXXXXXXXXX"
+                href="tel:+919732269939"
                 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', padding: '16px 28px', border: '1px solid rgba(232,184,75,0.4)', color: '#E8B84B', borderRadius: '3px', textDecoration: 'none', fontSize: '13px', letterSpacing: '1.5px', textTransform: 'uppercase', minHeight: '54px' }}
               >
                 <Phone size={14} /> Call to Reserve
