@@ -300,7 +300,19 @@ export default function Layout() {
           </div>
 
           {/* Credits */}
-          <div style={{ color: '#3A3028', fontSize: '12px', marginBottom: '24px' }}>Made with ❤️ for Hotel খোয়াই</div>
+          <div style={{ color: '#6A5A46', fontSize: '12px', marginBottom: '24px' }}>
+            Made with ❤️ for Hotel খোয়াই by{' '}
+            <a
+              href="https://github.com/Surja2003"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: '#E8B84B', textDecoration: 'none', fontWeight: 600, transition: 'color 0.2s' }}
+              onMouseEnter={e => e.currentTarget.style.color = '#00E5CC'}
+              onMouseLeave={e => e.currentTarget.style.color = '#E8B84B'}
+            >
+              Surja
+            </a>
+          </div>
 
           {/* Back to top */}
           <button
