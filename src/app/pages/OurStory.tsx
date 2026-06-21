@@ -7,11 +7,11 @@ const stagger = { hidden: {}, show: { transition: { staggerChildren: 0.1 } } };
 const fadeUp = { hidden: { opacity: 0, y: 28 }, show: { opacity: 1, y: 0, transition: { duration: 0.65, ease: [0.4, 0, 0.2, 1] } } };
 
 const milestones = [
-  { year: '2022', title: 'The Beginning', icon: '🌱', desc: 'Hotel খোয়াই opens at Orgram Jora Canal Bridge, Shantiniketan Bolpur Road, Bardhaman — serving home-style Bengali food to families and travellers.' },
-  { year: '2022', title: 'The Bamboo Hall', icon: '🪵', desc: 'The iconic bamboo-framed dining hall is built — an architectural tribute to Bengal\'s heritage, with hand-woven ceilings and warm lantern light.' },
-  { year: '2023', title: 'Folk Art Revival', icon: '🎨', desc: 'Local artisans paint the walls with Bengali folk art, transforming the restaurant into a living gallery of cultural expression.' },
-  { year: '2023', title: 'The Fairy Gazebo', icon: '✨', desc: 'The beloved outdoor gazebo with fairy lights is unveiled — instantly becoming the most photographed spot in Orgram, Bardhaman.' },
-  { year: '2024', title: 'Google Certified', icon: '⭐', desc: 'Hotel খোয়াই achieves 4.5 stars on Google with 15,000+ monthly guests — recognised as Bardhaman\'s premier dining destination.' },
+  { year: 'Sept 2023', title: 'The Beginning', icon: '🌱', desc: 'Hotel খোয়াই opens at Orgram Jora Canal Bridge, Shantiniketan Bolpur Road, Bardhaman — serving home-style Bengali food to families and travellers.' },
+  { year: 'Late 2023', title: 'The Bamboo Hall', icon: '🪵', desc: 'The iconic bamboo-framed dining hall is built — an architectural tribute to Bengal\'s heritage, with hand-woven ceilings and warm lantern light.' },
+  { year: 'Early 2024', title: 'Folk Art Revival', icon: '🎨', desc: 'Local artisans paint the walls with Bengali folk art, transforming the restaurant into a living gallery of cultural expression.' },
+  { year: 'Late 2024', title: 'The Fairy Gazebo', icon: '✨', desc: 'The beloved outdoor gazebo with fairy lights is unveiled — instantly becoming the most photographed spot in Orgram, Bardhaman.' },
+  { year: '2025', title: 'Google Certified', icon: '⭐', desc: 'Hotel খোয়াই achieves 4.5 stars on Google with 15,000+ monthly guests — recognised as Bardhaman\'s premier dining destination.' },
 ];
 
 const values = [
@@ -161,7 +161,7 @@ export default function OurStory() {
             </div>
 
             {[
-              'Hotel খোয়াই was established in 2022 near the Orgram Jora Canal Bridge in Bardhaman, West Bengal. Born from a single unwavering belief: that authentic Bengali food, cooked with honesty and served with warmth, can turn any meal into a memorable celebration. What began just 3+ years ago with a simple goal has blossomed into one of the region\'s most beloved culinary landmarks, nestled along the Shantiniketan Bolpur Road.',
+              'Hotel খোয়াই was established in September 2023 near the Orgram Jora Canal Bridge in Bardhaman, West Bengal. Born from a single unwavering belief: that authentic Bengali food, cooked with honesty and served with warmth, can turn any meal into a memorable celebration. What began in September 2023 with a simple goal has blossomed into one of the region\'s most beloved culinary landmarks, nestled along the Shantiniketan Bolpur Road.',
               'The name \'খোয়াই\' (Khoai) is inspired by the red soil (লাল মাটি) and the uniquely beautiful, weather-worn canyons of Bolpur, immortalised in Rabindranath Tagore\'s poetry. In our kitchen, every dish is prepared with meticulous care—carefully balancing spices to bring out the scent of the soil (মাটির গন্ধ) and the true spirit of বাঙালিয়ানা (Bengaliness). From our slow-cooked Handi Mutton (হাঁড়ি মাংস) to the rich flavours of Sorshe Ilish (সর্ষে ইলিশ), each recipe is a piece of culinary heritage.',
               'Our walls are adorned with traditional আলপনা (Alpona) and folk paintings created by local artisans, making your visit a visual feast as well. Whether you sit inside our rustic Bamboo Hall (বাঁশের কেল্লা) or dine under the stars in our fairy-lit Gazebo, you will experience the genuine warmth of বাঙালি আতিথেয়তা (Bengali hospitality). At Hotel খোয়াই, you are always part of our family.'
             ].map((para, i) => (
