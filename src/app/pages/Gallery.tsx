@@ -158,7 +158,7 @@ export default function Gallery() {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   useEffect(() => {
-    document.title = 'Gallery | Hotel খোয়াই — Bamboo Hall, Gazebo & Events | Orgram Bardhaman';
+    document.title = 'Gallery | Hotel খোয়াঁই — Bamboo Hall, Gazebo & Events | Orgram Bardhaman';
   }, []);
 
   const filtered = active === 'all' ? items : items.filter(i => i.category === active);
@@ -461,7 +461,7 @@ export default function Gallery() {
         <div style={{ maxWidth: '640px', margin: '0 auto' }}>
           <div style={{ width: '48px', height: '1px', background: 'linear-gradient(90deg,transparent,rgba(232,184,75,0.5),transparent)', margin: '0 auto 28px' }} />
           <blockquote style={{ fontFamily: '"Playfair Display", serif', fontSize: 'clamp(16px,2.5vw,24px)', color: '#F5ECD7', lineHeight: 1.7, fontStyle: 'italic', marginBottom: '18px' }}>
-            "Every corner of Hotel খোয়াই is a frame-worthy moment."
+            "Every corner of Hotel খোয়াঁই is a frame-worthy moment."
           </blockquote>
           <div style={{ color: '#4A3F30', fontSize: '11px', letterSpacing: '2.5px', textTransform: 'uppercase' }}>A Guest Review</div>
           <div style={{ width: '48px', height: '1px', background: 'linear-gradient(90deg,transparent,rgba(232,184,75,0.5),transparent)', margin: '28px auto 0' }} />

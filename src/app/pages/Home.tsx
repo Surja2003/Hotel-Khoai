@@ -128,7 +128,7 @@ function GazeboVisual() {
       }}>
         <img 
           src="/assets/gazebo_night.png" 
-          alt="Fairy Lit Gazebo at Hotel খোয়াই" 
+          alt="Fairy Lit Gazebo at Hotel খোয়াঁই" 
           style={{ 
             width: '100%', 
             height: '100%', 
@@ -159,7 +159,7 @@ function GazeboVisual() {
 
 /* ─── Data ────────────────────────────────────────────────── */
 const dishes = [
-  { name: 'Khoai Special Chicken', bengali: 'খোয়াই স্পেশাল চিকেন', price: '₹330', desc: '4-piece slow-cooked in a secret masala blend, simmered for hours to draw out deep, smoky layers.', grad: 'linear-gradient(140deg,#2D1000,#6B2800,#1A0800)', tag: 'Non-Veg Main' },
+  { name: 'Khoai Special Chicken', bengali: 'খোয়াঁই স্পেশাল চিকেন', price: '₹330', desc: '4-piece slow-cooked in a secret masala blend, simmered for hours to draw out deep, smoky layers.', grad: 'linear-gradient(140deg,#2D1000,#6B2800,#1A0800)', tag: 'Non-Veg Main' },
   { name: 'Sorshe Ilish', bengali: 'সর্ষে ইলিশ', price: '₹340', desc: 'The soul of Bengal. Hilsa steeped in golden mustard, wrapped in tradition and served warm.', grad: 'linear-gradient(140deg,#001528,#003D5A,#001020)', tag: 'Fish & Seafood' },
   { name: 'Handi Mutton', bengali: 'হান্ডি মাটন', price: '₹540', desc: '5-piece tender mutton, sealed and slow-simmered in a clay handi for rich, layered depth.', grad: 'linear-gradient(140deg,#180A00,#5A2000,#100500)', tag: 'Non-Veg Main' },
 ];
@@ -184,7 +184,7 @@ export default function Home() {
   const [heroReady, setHeroReady] = useState(!showPreloader);
 
   useEffect(() => {
-    document.title = 'Hotel খোয়াই | Best Restaurant in Orgram Bardhaman | হোটেল খোয়াই';
+    document.title = 'Hotel খোয়াঁই | Best Restaurant in Orgram Bardhaman | হোটেল খোয়াঁই';
   }, []);
 
   const finishPreloader = useCallback(() => {
@@ -262,7 +262,7 @@ export default function Home() {
               fontSize: 'clamp(44px, 9vw, 96px)',
               textShadow: '0 0 30px rgba(0,229,204,0.3)'
             }}>
-              খোয়াই
+              খোয়াঁই
             </span>
           </motion.h1>
 
@@ -344,7 +344,7 @@ export default function Home() {
             {/* Decorative line */}
             <div style={{ width: '48px', height: '1px', background: 'linear-gradient(90deg,#E8B84B,transparent)', marginBottom: '24px' }} />
             <p style={{ color: '#9C8A6E', lineHeight: 1.9, fontSize: 'clamp(14px,2vw,15px)', marginBottom: '36px' }}>
-              Located along the Shantiniketan Bolpur Road at Orgram Jora Canal Bridge, Bardhaman, Hotel খোয়াই was established in 2022 from an unwavering passion for authentic Bengali cuisine and a deep love for the region's cultural heritage. Every bamboo pillar, every hand-painted mural tells a story.
+              Located along the Shantiniketan Bolpur Road at Orgram Jora Canal Bridge, Bardhaman, Hotel খোয়াঁই was established in 2022 from an unwavering passion for authentic Bengali cuisine and a deep love for the region's cultural heritage. Every bamboo pillar, every hand-painted mural tells a story.
             </p>
             <Link to="/our-story" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', color: '#E8B84B', textDecoration: 'none', fontSize: '13px', letterSpacing: '1.5px', textTransform: 'uppercase', borderBottom: '1px solid rgba(232,184,75,0.4)', paddingBottom: '4px' }}>
               Read Our Story <ArrowRight size={13} />

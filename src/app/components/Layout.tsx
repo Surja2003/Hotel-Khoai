@@ -104,7 +104,7 @@ export default function Layout() {
                 gap: '6px'
               }}>
                 <span style={{ fontFamily: '"Playfair Display", serif', color: '#E8B84B' }}>Hotel</span>
-                <span>খোয়াই</span>
+                <span>খোয়াঁই</span>
               </div>
             </div>
           </Link>
@@ -280,7 +280,7 @@ export default function Layout() {
           {/* Logo */}
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', marginBottom: '8px' }}>
             <span style={{ fontFamily: '"Playfair Display", serif', color: '#E8B84B', fontSize: '36px', textShadow: '0 0 20px rgba(232,184,75,0.2)' }}>Hotel</span>
-            <span style={{ fontFamily: '"Tiro Bangla", serif', color: '#00E5CC', fontSize: '36px', textShadow: '0 0 20px rgba(0,229,204,0.2)' }}>খোয়াই</span>
+            <span style={{ fontFamily: '"Tiro Bangla", serif', color: '#00E5CC', fontSize: '36px', textShadow: '0 0 20px rgba(0,229,204,0.2)' }}>খোয়াঁই</span>
           </div>
 
           {/* Tagline */}
@@ -300,7 +300,7 @@ export default function Layout() {
           </div>
 
           {/* Credits */}
-          <div style={{ color: '#3A3028', fontSize: '12px', marginBottom: '24px' }}>Made with ❤️ for Hotel খোয়াই</div>
+          <div style={{ color: '#3A3028', fontSize: '12px', marginBottom: '24px' }}>Made with ❤️ for Hotel খোয়াঁই</div>
 
           {/* Back to top */}
           <button

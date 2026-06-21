@@ -19,7 +19,7 @@ const contactItems = [
     label: 'Location',
     content: (
       <>
-        <div style={{ color: '#F5ECD7', fontSize: 'clamp(14px,2vw,15px)', marginBottom: '6px', fontFamily: '"Playfair Display", serif' }}>Hotel খোয়াই</div>
+        <div style={{ color: '#F5ECD7', fontSize: 'clamp(14px,2vw,15px)', marginBottom: '6px', fontFamily: '"Playfair Display", serif' }}>Hotel খোয়াঁই</div>
         <div style={{ color: '#9C8A6E', fontSize: '14px', lineHeight: 1.75 }}>
           Orgram Jora Canal Bridge,<br />
           Shantiniketan Bolpur Road,<br />
@@ -87,7 +87,7 @@ function MapEmbed() {
   return (
     <div style={{ width: '100%', height: '100%', position: 'relative', overflow: 'hidden', borderRadius: '12px' }}>
       <iframe
-        title="Hotel খোয়াই Location — Orgram, Bardhaman"
+        title="Hotel খোয়াঁই Location — Orgram, Bardhaman"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3661.1761826402317!2d87.76452027588986!3d23.418002001455058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f9cd633b72aeb7%3A0xa40d4a177ca1fe77!2sHotel%20khoai!5e0!3m2!1sen!2sus!4v1782034386566!5m2!1sen!2sus"
         width="100%"
         height="100%"
@@ -102,7 +102,7 @@ function MapEmbed() {
 
 export default function FindUs() {
   useEffect(() => {
-    document.title = 'Find Us | Hotel খোয়াই — Orgram, Bardhaman, West Bengal';
+    document.title = 'Find Us | Hotel খোয়াঁই — Orgram, Bardhaman, West Bengal';
   }, []);
   return (
     <>
