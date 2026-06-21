@@ -216,8 +216,6 @@ export default function Home() {
         {/* Background Image Layer with responsive blur */}
         <div className="khoai-hero-bg" />
 
-        {/* Bamboo weave bg */}
-        <div style={{ position: 'absolute', inset: 0, opacity: 0.032, backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cpath d='M0 0L60 60M-15 15L45 75M15-15L75 45' stroke='%23E8B84B' stroke-width='1' fill='none'/%3E%3C/svg%3E")`, backgroundRepeat: 'repeat' }} />
 
         {/* Hero content */}
         <motion.div
