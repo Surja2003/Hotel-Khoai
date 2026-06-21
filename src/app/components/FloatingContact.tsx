@@ -190,8 +190,21 @@ export default function FloatingContact() {
             : '0 4px 24px rgba(232,184,75,0.5)',
           transition: 'background-color 0.3s, box-shadow 0.3s, border 0.3s',
           flexShrink: 0,
+          position: 'relative',
         }}
       >
+        {!expanded && (
+          <div
+            style={{
+              position: 'absolute',
+              inset: 0,
+              borderRadius: '50%',
+              border: '2.5px solid #E8B84B',
+              pointerEvents: 'none',
+              animation: 'pulse-ring 1.8s cubic-bezier(0.215, 0.610, 0.355, 1) infinite',
+            }}
+          />
+        )}
         <motion.div
           animate={{ rotate: expanded ? 45 : 0 }}
           transition={{ duration: 0.25 }}
