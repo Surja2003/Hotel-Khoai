@@ -3,48 +3,48 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>https://hotel-khoai.vercel.app/</loc>
+    <loc>https://hotelkhoai.co.in/</loc>
     <lastmod>2026-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://hotel-khoai.vercel.app/" />
-    <xhtml:link rel="alternate" hreflang="bn" href="https://hotel-khoai.vercel.app/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hotelkhoai.co.in/" />
+    <xhtml:link rel="alternate" hreflang="bn" href="https://hotelkhoai.co.in/" />
   </url>
 
   <url>
-    <loc>https://hotel-khoai.vercel.app/menu</loc>
+    <loc>https://hotelkhoai.co.in/menu</loc>
     <lastmod>2026-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://hotel-khoai.vercel.app/menu" />
-    <xhtml:link rel="alternate" hreflang="bn" href="https://hotel-khoai.vercel.app/menu" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hotelkhoai.co.in/menu" />
+    <xhtml:link rel="alternate" hreflang="bn" href="https://hotelkhoai.co.in/menu" />
   </url>
 
   <url>
-    <loc>https://hotel-khoai.vercel.app/find-us</loc>
+    <loc>https://hotelkhoai.co.in/find-us</loc>
     <lastmod>2026-06-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://hotel-khoai.vercel.app/find-us" />
-    <xhtml:link rel="alternate" hreflang="bn" href="https://hotel-khoai.vercel.app/find-us" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hotelkhoai.co.in/find-us" />
+    <xhtml:link rel="alternate" hreflang="bn" href="https://hotelkhoai.co.in/find-us" />
   </url>
 
   <url>
-    <loc>https://hotel-khoai.vercel.app/gallery</loc>
+    <loc>https://hotelkhoai.co.in/gallery</loc>
     <lastmod>2026-06-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://hotel-khoai.vercel.app/gallery" />
-    <xhtml:link rel="alternate" hreflang="bn" href="https://hotel-khoai.vercel.app/gallery" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hotelkhoai.co.in/gallery" />
+    <xhtml:link rel="alternate" hreflang="bn" href="https://hotelkhoai.co.in/gallery" />
   </url>
 
   <url>
-    <loc>https://hotel-khoai.vercel.app/our-story</loc>
+    <loc>https://hotelkhoai.co.in/our-story</loc>
     <lastmod>2026-06-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://hotel-khoai.vercel.app/our-story" />
-    <xhtml:link rel="alternate" hreflang="bn" href="https://hotel-khoai.vercel.app/our-story" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hotelkhoai.co.in/our-story" />
+    <xhtml:link rel="alternate" hreflang="bn" href="https://hotelkhoai.co.in/our-story" />
   </url>
 
 </urlset>

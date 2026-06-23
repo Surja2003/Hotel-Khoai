@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://hotel-khoai.vercel.app/sitemap.xml
+Sitemap: https://hotelkhoai.co.in/sitemap.xml
 
 # Allow all major crawlers explicitly
 User-agent: Googlebot
