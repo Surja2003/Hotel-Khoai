@@ -270,8 +270,8 @@ const physicalMenuPages = [
   { page: 1, src: '/assets/menu/Menu_1.jpg', title: 'Breakfast & Veg Starter' },
   { page: 2, src: '/assets/menu/Menu_2.jpg', title: 'Starter Chicken & Fish' },
   { page: 3, src: '/assets/menu/Menu_3.jpg', title: 'Lunch Specials' },
-  { page: 4, src: '/assets/menu/Menu_4.jpg', title: 'Non-Veg Gravy & Rice' },
-  { page: 5, src: '/assets/menu/Menu_5.jpg', title: 'Roti, Veg Gravy & Chow' },
+  { page: 4, src: '/assets/menu/Menu_5.jpg', title: 'Non-Veg Gravy & Rice' },
+  { page: 5, src: '/assets/menu/Menu_4.jpg', title: 'Roti, Veg Gravy & Chow' },
   { page: 6, src: '/assets/menu/Menu_6.jpg', title: 'Drinks, Soups & Desserts' },
 ];
 
