@@ -217,10 +217,10 @@ function FAQSection() {
 
 export default function FindUs() {
   useEffect(() => {
-    document.title = 'Find Us | Hotel খোয়াই — Orgram, Bardhaman, West Bengal';
+    document.title = 'Find Us | Hotel খোয়াই — Orgram, Guskara, Bardhaman, West Bengal';
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
-      metaDesc.setAttribute('content', 'Find location, driving directions, phone numbers, and interactive map for Hotel খোয়াই at Orgram Jora Canal Bridge, Shantiniketan Bolpur Road, Bardhaman. Open daily 8 AM – 12:05 AM.');
+      metaDesc.setAttribute('content', 'Get directions, contact info, and interactive map for Hotel খোয়াই (best hotel/restaurant near Guskara & Orgram, Bardhaman). Located at Orgram Jora Canal Bridge on Shantiniketan Bolpur Road.');
     }
   }, []);
   return (

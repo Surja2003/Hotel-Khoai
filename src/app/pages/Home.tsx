@@ -185,10 +185,10 @@ export default function Home() {
   const [heroReady, setHeroReady] = useState(!showPreloader);
 
   useEffect(() => {
-    document.title = 'Hotel খোয়াই | Best Restaurant in Orgram Bardhaman | হোটেল খোয়াই';
+    document.title = 'Hotel খোয়াই | Best Restaurant & Hotel in Orgram, Guskara, Bardhaman | হোটেল খোয়াই';
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
-      metaDesc.setAttribute('content', 'Welcome to Hotel খোয়াই (Hotel Khoai), Orgram Bardhaman\'s premier restaurant. Experience authentic Bengali Thali, Handi Mutton, Chinese & Tandoori cuisines in our Bamboo Hall & Gazebos.');
+      metaDesc.setAttribute('content', 'Welcome to Hotel খোয়াই (Hotel Khoai) — Orgram & Guskara (Bardhaman)-এর সেরা রেস্তোরাঁ ও হোটেল (Best Hotel & Restaurant in Guskara / Orgram). Experience authentic Bengali Thali, Handi Mutton, and Chinese.');
     }
   }, []);
 
