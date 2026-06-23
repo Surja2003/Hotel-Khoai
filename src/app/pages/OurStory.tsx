@@ -50,6 +50,7 @@ function StoryVisuals() {
         <img 
           src="/assets/hotel_exterior.png" 
           alt="Hotel খোয়াই Exterior" 
+          loading="lazy"
           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
         />
         <div style={{
@@ -86,6 +87,7 @@ function StoryVisuals() {
         <img 
           src="/assets/gazebo_night.png" 
           alt="Fairy Lit Gazebo" 
+          loading="lazy"
           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
         />
         <div style={{
@@ -130,6 +132,10 @@ function StoryVisuals() {
 export default function OurStory() {
   useEffect(() => {
     document.title = 'Our Story | Hotel খোয়াই — Orgram, Bardhaman | হোটেল খোয়াই';
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute('content', 'Discover the journey of Hotel খোয়াই (Hotel Khoai), established in September 2023. Read about our passion for preserving traditional Bengali flavours and creating an immersive dining space in Bardhaman.');
+    }
   }, []);
   return (
     <div style={{ backgroundColor: '#0D0A07' }}>

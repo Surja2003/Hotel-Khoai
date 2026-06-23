@@ -129,6 +129,7 @@ function GazeboVisual() {
         <img 
           src="/assets/gazebo_night.png" 
           alt="Fairy Lit Gazebo at Hotel খোয়াই" 
+          loading="lazy"
           style={{ 
             width: '100%', 
             height: '100%', 
@@ -185,6 +186,10 @@ export default function Home() {
 
   useEffect(() => {
     document.title = 'Hotel খোয়াই | Best Restaurant in Orgram Bardhaman | হোটেল খোয়াই';
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute('content', 'Welcome to Hotel খোয়াই (Hotel Khoai), Orgram Bardhaman\'s premier restaurant. Experience authentic Bengali Thali, Handi Mutton, Chinese & Tandoori cuisines in our Bamboo Hall & Gazebos.');
+    }
   }, []);
 
   const finishPreloader = useCallback(() => {

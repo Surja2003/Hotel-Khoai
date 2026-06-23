@@ -159,6 +159,10 @@ export default function Gallery() {
 
   useEffect(() => {
     document.title = 'Gallery | Hotel খোয়াই — Bamboo Hall, Gazebo & Events | Orgram Bardhaman';
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute('content', 'Take a visual tour of Hotel খোয়াই. Browse high-quality photos of our rustic Bamboo Dining Hall, fairy-lit outdoor Gazebos, and mouth-watering Bengali dishes.');
+    }
   }, []);
 
   const filtered = active === 'all' ? items : items.filter(i => i.category === active);

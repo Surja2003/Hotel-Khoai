@@ -315,6 +315,10 @@ export default function Menu() {
 
   useEffect(() => {
     document.title = 'Menu | Hotel খোয়াই — Bengali, Tandoori & Chinese Cuisine | Orgram Bardhaman';
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute('content', 'Explore the digital menu of Hotel খোয়াই. View prices for our authentic Bengali delicacies (Sorshe Ilish, Handi Mutton), Chinese, Tandoori, and refresh with drinks & sweets.');
+    }
   }, []);
 
   const menuSectionRef = useRef<HTMLDivElement>(null);
