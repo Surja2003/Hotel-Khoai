@@ -267,12 +267,12 @@ const tabs = [
 ];
 
 const physicalMenuPages = [
-  { page: 1, src: '/assets/menu/menu_6.jpeg', title: 'Breakfast & Veg Starter' },
-  { page: 2, src: '/assets/menu/menu_3.jpeg', title: 'Starter Chicken & Fish' },
-  { page: 3, src: '/assets/menu/menu_1.jpeg', title: 'Lunch Specials' },
-  { page: 4, src: '/assets/menu/menu_4.jpeg', title: 'Non-Veg Gravy & Rice' },
-  { page: 5, src: '/assets/menu/menu_5.jpeg', title: 'Roti, Veg Gravy & Chow' },
-  { page: 6, src: '/assets/menu/menu_2.jpeg', title: 'Drinks, Soups & Desserts' },
+  { page: 1, src: '/assets/menu/Menu_1.jpg', title: 'Breakfast & Veg Starter' },
+  { page: 2, src: '/assets/menu/Menu_2.jpg', title: 'Starter Chicken & Fish' },
+  { page: 3, src: '/assets/menu/Menu_3.jpg', title: 'Lunch Specials' },
+  { page: 4, src: '/assets/menu/Menu_4.jpg', title: 'Non-Veg Gravy & Rice' },
+  { page: 5, src: '/assets/menu/Menu_5.jpg', title: 'Roti, Veg Gravy & Chow' },
+  { page: 6, src: '/assets/menu/Menu_6.jpg', title: 'Drinks, Soups & Desserts' },
 ];
 
 const stagger = { hidden: {}, show: { transition: { staggerChildren: 0.03 } } };
