@@ -298,7 +298,7 @@ export default function Layout() {
               </Link>
             ))}
             <a
-              href="/admin/"
+              href="/admin/#/admin/login"
               style={{ color: '#6A5A46', textDecoration: 'none', fontSize: '13px', letterSpacing: '0.5px', transition: 'color 0.3s' }}
               onMouseEnter={e => e.currentTarget.style.color = '#E8B84B'}
               onMouseLeave={e => e.currentTarget.style.color = '#6A5A46'}
